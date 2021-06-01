@@ -3,6 +3,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+
 [packages]
 click = "==7.1.2"
 gunicorn = "==20.0.4"
