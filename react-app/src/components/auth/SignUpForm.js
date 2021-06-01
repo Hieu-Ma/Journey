@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import { login } from "../../store/session";
 
 const SignUpForm = () => {
+  const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +17,16 @@ const SignUpForm = () => {
     e.preventDefault();
     if (password === repeatPassword) {
       await dispatch(signUp(username, email, password));
+    }
+  };
+
+  const demoLogin = async (e) => {
+    e.preventDefault();
+    const demoEmail = "demo@gmail.com";
+    const demoPassword = "password"
+    const data = await dispatch(login(demoEmail, demoPassword));
+    if (data.errors) {
+      setErrors(data.errors);
     }
   };
 
@@ -77,6 +89,7 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
+      <button onClick={demoLogin}>Demo Login</button>
       <button type="submit">Sign Up</button>
     </form>
   );
