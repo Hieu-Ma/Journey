@@ -1,2 +1,3 @@
 # Journey
-Journey is a journaling app where users can create their own journal and entries in it!
+
+Journey is a web application that allows users to create journals and entries in them!
