@@ -37,6 +37,14 @@
    transition: border .2s;
 }
 
+.signup__input:hover {
+   border: 2px solid rgb(34, 34, 34);
+}
+
+.signup__input:focus {
+   border: 2px solid rgb(34, 34, 34);
+}
+
 #signup__buttons button {
    border-radius: 17px;
    width: 121px;

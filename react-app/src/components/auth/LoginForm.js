@@ -46,9 +46,9 @@ const LoginForm = () => {
       <h1 id="splash__page__title">Journey</h1>
       <div id="title__bar"></div>
       <form onSubmit={onLogin} id="login__form">
-        <div>
+        <div id="error__container">
           {errors.map((error) => (
-            <div>{error}</div>
+            <div className="error">{error}</div>
           ))}
         </div>
         <div className="input">
