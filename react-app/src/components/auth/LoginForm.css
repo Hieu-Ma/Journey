@@ -6,47 +6,88 @@
    background-size: cover;
    background-repeat: no-repeat;
    background-position-y: 66%;
+   color: #666666;
+}
+
+#splash__page__title {
+   position: fixed;
+   top: 135px;
+   font-size: 50px;
+   color: #4E4E4E;
+   /* border-bottom: 3px solid grey; */
 }
 
 #login__form {
    position:fixed;
-   top: 200px;
+   top: 265px;
    width: 492px;
-   height: 346px;
+   height: 245px;
    background-color: white;
    border: 3px solid #999999;
    border-radius: 25px;
 }
 
-.login__form--input--container {
+.input {
 
 }
 
-.login__form--input--container label, input{
+.input label, input{
    display: block;
 }
 
-#login__form--email--label {
+#email__label {
+   margin-top: 18px;
    margin-left: 46.5px;
+   margin-bottom: 10px;
 }
 
-#login__form--password--label {
+#password__label {
+   margin-top: 18px;
    margin-left: 46.5px;
+   margin-bottom: 10px;
 }
 
-.login__form--input {
+.login__input {
    margin: auto;
+   height: 25px;
    width: 391px;
+   border-radius: 25px;
+   opacity: 75%;
+   padding-left: 10px;
+   outline: none;
+   border: 2px solid #999999;
+   transition: border .2s;
 }
+
+.login__input:hover {
+   border: 2px solid rgb(34, 34, 34);
+}
+
+.login__input:focus {
+   border: 2px solid rgb(34, 34, 34);
+}
+
 
 #login__buttons {
    display: flex;
    justify-content: flex-end;
    width: 100%;
-   margin-top: 5px;
+   margin-top: 22px;
+}
+
+#login__buttons button {
+   border-radius: 17px;
+   width: 121px;
+   height: 28px;
+   border: 2px solid #999999;
+   transition: border .2s;
+}
+
+#login__buttons button:hover {
+   border: 2px solid rgb(95, 95, 95);
 }
 
 #login__button {
    margin-left: 5px;
-   margin-right: 46px;
+   margin-right: 43px;
 }

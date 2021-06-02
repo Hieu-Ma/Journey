@@ -43,32 +43,34 @@ const LoginForm = () => {
 
   return (
     <div id="splash__page">
+      <h1 id="splash__page__title">Journey</h1>
+      <div id="title__bar"></div>
       <form onSubmit={onLogin} id="login__form">
         <div>
           {errors.map((error) => (
             <div>{error}</div>
           ))}
         </div>
-        <div className="login__form--input--container">
-          <label htmlFor="email" id="login__form--email--label">Email</label>
+        <div className="input">
+          <label htmlFor="email" id="email__label">email</label>
           <input
             name="email"
             type="text"
-            placeholder="Email"
+            placeholder="email"
             value={email}
             onChange={updateEmail}
-            className="login__form--input"
+            className="login__input"
           />
         </div>
-        <div className="login__form--input--container">
-          <label htmlFor="password" id="login__form--password--label">Password</label>
+        <div className="input">
+          <label htmlFor="password" id="password__label">password</label>
           <input
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="password"
             value={password}
             onChange={updatePassword}
-            className="login__form--input"
+            className="login__input"
           />
         </div>
         <div id="login__buttons">
