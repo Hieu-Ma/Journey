@@ -1,0 +1,16 @@
+#logout {
+   position: fixed;
+   right: 8%;
+   padding: 0px;
+   border: none;
+   background-color: white;
+   color: #4E4E4E;
+   font-size: 17px;
+   margin-top: 6px;
+   cursor: pointer;
+   transition: color .2s;
+}
+
+#logout:hover {
+   color: black;
+}

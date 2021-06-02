@@ -1,0 +1,30 @@
+nav {
+   display: flex;
+   justify-content: center;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+#navbar__title {
+   color: #4E4E4E;
+   font-size: 59px;
+   margin: 0px;
+   margin-bottom: 9px
+}
+
+#navbar__border {
+   background-color: #707070;
+   height: 2px;
+   border-radius: 5px;
+   margin: 0px 8%;
+}
+
+#username {
+   position:fixed;
+   top:35px;
+   right: 8%;
+   font-size: 22px;
+   color: #4E4E4E;
+}
