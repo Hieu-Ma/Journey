@@ -42,37 +42,41 @@ const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={onLogin} id="login__form">
-      <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
-      </div>
-      <div className="login__form--input--container">
-        <label htmlFor="email" id="login__form--email--label">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-          className="login__form--input"
-        />
-      </div>
-      <div className="login__form--input--container">
-        <label htmlFor="password" id="login__form--password--label">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-          className="login__form--input"
-        />
-      </div>
-        <button onClick={demoLogin}>Demo Login</button>
-        <button type="submit">Login</button>
-    </form>
+    <div id="splash__page">
+      <form onSubmit={onLogin} id="login__form">
+        <div>
+          {errors.map((error) => (
+            <div>{error}</div>
+          ))}
+        </div>
+        <div className="login__form--input--container">
+          <label htmlFor="email" id="login__form--email--label">Email</label>
+          <input
+            name="email"
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={updateEmail}
+            className="login__form--input"
+          />
+        </div>
+        <div className="login__form--input--container">
+          <label htmlFor="password" id="login__form--password--label">Password</label>
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={updatePassword}
+            className="login__form--input"
+          />
+        </div>
+        <div id="login__buttons">
+          <button onClick={demoLogin}>Demo Login</button>
+          <button type="submit" id="login__button">Login</button>
+        </div>
+      </form>
+    </div>
   );
 };
 

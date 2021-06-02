@@ -1,5 +1,16 @@
+#splash__page {
+   display: flex;
+   justify-content: center;
+   background-image: url("../../images/water_color.jpg");
+   height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position-y: 66%;
+}
+
 #login__form {
-   /* display: block; */
+   position:fixed;
+   top: 200px;
    width: 492px;
    height: 346px;
    background-color: white;
@@ -26,4 +37,16 @@
 .login__form--input {
    margin: auto;
    width: 391px;
+}
+
+#login__buttons {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+   margin-top: 5px;
+}
+
+#login__button {
+   margin-left: 5px;
+   margin-right: 46px;
 }
