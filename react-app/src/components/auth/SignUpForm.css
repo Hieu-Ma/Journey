@@ -1,0 +1,80 @@
+#splash__page {
+   display: flex;
+   justify-content: center;
+   background-image: url("../../images/water_color.jpg");
+   height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position-y: 66%;
+   color: #666666;
+}
+
+#signup__form {
+   position:fixed;
+   top: 265px;
+   width: 492px;
+   height: 400px;
+   background-color: white;
+   border: 3px solid #999999;
+   border-radius: 25px;
+}
+
+.signup__label {
+   margin-top: 18px;
+   margin-left: 46.5px;
+   margin-bottom: 10px;
+}
+
+.signup__input {
+   margin: auto;
+   height: 25px;
+   width: 391px;
+   border-radius: 25px;
+   opacity: 75%;
+   padding-left: 10px;
+   outline: none;
+   border: 2px solid #999999;
+   transition: border .2s;
+}
+
+#signup__buttons button {
+   border-radius: 17px;
+   width: 121px;
+   height: 28px;
+   border: 2px solid #999999;
+   transition: border .2s;
+}
+
+#signup__buttons {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+   align-items: center;
+   margin-top: 23px;
+}
+
+#signup__buttons a {
+   text-decoration: none;
+   color: #666666;
+}
+
+#login__link {
+   margin: 0px;
+   font-size: 13px;
+   margin-right: 13px;
+   border-bottom: 2px solid #99999977;
+   transition: border-bottom .2s;
+}
+
+#login__link:hover {
+   border-bottom: 2px solid rgb(174, 243, 255);
+}
+
+#signup__buttons button:hover {
+   border: 2px solid rgb(95, 95, 95);
+}
+
+#signup__button {
+   margin-left: 5px;
+   margin-right: 43px;
+}
