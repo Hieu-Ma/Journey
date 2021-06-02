@@ -1,0 +1,29 @@
+#login__form {
+   /* display: block; */
+   width: 492px;
+   height: 346px;
+   background-color: white;
+   border: 3px solid #999999;
+   border-radius: 25px;
+}
+
+.login__form--input--container {
+
+}
+
+.login__form--input--container label, input{
+   display: block;
+}
+
+#login__form--email--label {
+   margin-left: 46.5px;
+}
+
+#login__form--password--label {
+   margin-left: 46.5px;
+}
+
+.login__form--input {
+   margin: auto;
+   width: 391px;
+}
