@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import { login } from "../../store/session";
 import "./LoginForm.css";
 
@@ -74,6 +74,7 @@ const LoginForm = () => {
           />
         </div>
         <div id="login__buttons">
+          <NavLink to="/sign-up"><h3 id="signup__link">No account? Sign up!</h3></NavLink>
           <button onClick={demoLogin}>Demo Login</button>
           <button type="submit" id="login__button">Login</button>
         </div>
