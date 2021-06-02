@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import { login } from "../../store/session";
+import "./SignUpForm.css"
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
@@ -51,47 +52,58 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
-      <div>
-        <label>User Name</label>
-        <input
-          type="text"
-          name="username"
-          onChange={updateUsername}
-          value={username}
-        ></input>
-      </div>
-      <div>
-        <label>Email</label>
-        <input
-          type="text"
-          name="email"
-          onChange={updateEmail}
-          value={email}
-        ></input>
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          onChange={updatePassword}
-          value={password}
-        ></input>
-      </div>
-      <div>
-        <label>Repeat Password</label>
-        <input
-          type="password"
-          name="repeat_password"
-          onChange={updateRepeatPassword}
-          value={repeatPassword}
-          required={true}
-        ></input>
-      </div>
-      <button onClick={demoLogin}>Demo Login</button>
-      <button type="submit">Sign Up</button>
-    </form>
+    <div id="splash__page">
+      <h1 id="splash__page__title">Journey</h1>
+      <div id="title__bar"></div>
+      <form onSubmit={onSignUp} id="signup__form">
+        <div className="input">
+          <label className="signup__label">User Name</label>
+          <input
+            type="text"
+            name="username"
+            onChange={updateUsername}
+            value={username}
+            className="signup__input"
+          ></input>
+        </div>
+        <div className="input">
+          <label className="signup__label">Email</label>
+          <input
+            type="text"
+            name="email"
+            onChange={updateEmail}
+            value={email}
+            className="signup__input"
+          ></input>
+        </div>
+        <div className="input">
+          <label className="signup__label">Password</label>
+          <input
+            type="password"
+            name="password"
+            onChange={updatePassword}
+            value={password}
+            className="signup__input"
+          ></input>
+        </div>
+        <div className="input">
+          <label className="signup__label">Repeat Password</label>
+          <input
+            type="password"
+            name="repeat_password"
+            onChange={updateRepeatPassword}
+            value={repeatPassword}
+            required={true}
+            className="signup__input"
+          ></input>
+        </div>
+        <div id="signup__buttons">
+          <NavLink to="/login"><h3 id="login__link">Have an account? Log in!</h3></NavLink>
+          <button onClick={demoLogin}>Demo Login</button>
+          <button type="submit" id="signup__button">Sign Up</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
