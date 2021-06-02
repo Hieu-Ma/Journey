@@ -20,3 +20,11 @@ nav a {
    border-radius: 5px;
    margin: 0px 8%;
 }
+
+#username {
+   position:fixed;
+   top:35px;
+   right: 8%;
+   font-size: 22px;
+   color: #4E4E4E;
+}
