@@ -8,7 +8,9 @@ const CreateJournal = () => {
             <div id="create__button">create a new journal!</div>
          </div>
          <div id="journal__benefits">
+
             <div id="benefits__title">Why Journal?</div>
+
             <div id="stress__container" className="containers">
                <h3 id="stress__title">Reduces Stress</h3>
                <p id="stress__description">
@@ -18,7 +20,11 @@ const CreateJournal = () => {
                   experiences can help you manage them in a healthy way.
                </p>
             </div>
-            <div id="stress__img" className="images"></div>
+
+            <div className="image__container">
+               <div id="stress__img" className="images"></div>
+            </div>
+
             <div id="memory__container" className="containers">
                <h3 id="memory__title">Keeps Memory Sharp</h3>
                <p id="memory__description">
@@ -28,7 +34,11 @@ const CreateJournal = () => {
                   improved cognitive processing.
                </p>
             </div>
-            <div id="memory__img" className="images"></div>
+
+            <div id="memory__img__container" className="image__container">
+               <div id="memory__img" className="images"></div>
+            </div>
+
             <div id="immune__container" className="containers">
                <h3 id="immune__title">Improves Immune Function</h3>
                <p id="immune__description">
@@ -38,7 +48,11 @@ const CreateJournal = () => {
                    rheumatoid arthritis.
                </p>
             </div>
-            <div id="immune__img" className="images"></div>
+
+            <div id="immune__img__container" className="image__container">
+               <div id="immune__img" className="images"></div>
+            </div>
+
             <div id="mood__container" className="containers">
                <h3 id="mood__title">Boosts Mood</h3>
                <p id="mood__description">
@@ -47,7 +61,11 @@ const CreateJournal = () => {
                   overall emotional well-being and happiness.
                </p>
             </div>
-            <div id="mood__img" className="images"></div>
+
+            <div id="mood__img__container" className="image__container">
+               <div id="mood__img" className="images"></div>
+            </div>
+
             <div id="emotion__container" className="containers">
                <h3 id="emotion__title">Strengthens Emotional Functions</h3>
                <p id="emotion__description">
@@ -56,7 +74,11 @@ const CreateJournal = () => {
                   by connecting with inner needs and desires.
                </p>
             </div>
-            <div id="emotion__img" className="images"></div>
+
+            <div id="emotion__img__container" className="image__container">
+               <div id="emotion__img" className="images"></div>
+            </div>
+
          </div>
       </div>
    )
