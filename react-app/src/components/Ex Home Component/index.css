@@ -27,11 +27,3 @@
    border-radius: 27px;
    color: #4E4E4E;
 }
-
-#journal__benefits {
-   display: grid;
-   height: 80%;
-   margin: 0 10px;
-   overflow-y: scroll;
-   border: 1px solid black;
-}

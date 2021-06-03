@@ -7,9 +7,6 @@ const CreateJournal = () => {
          <div id="journal__border">
             <div id="create__button">create a new journal!</div>
          </div>
-         <div id="journal__benefits">
-         
-         </div>
       </div>
    )
 }

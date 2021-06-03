@@ -4,3 +4,9 @@
    height: calc(100vh - 88px);
    margin: 0 8%;
 }
+
+#journaling__facts {
+   border: 1px solid black;
+   width: 100px;
+   height: 100px;
+}
