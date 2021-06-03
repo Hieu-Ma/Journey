@@ -30,8 +30,55 @@
 
 #journal__benefits {
    display: grid;
+   grid-gap: 10px;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: 
+   "title title"
+   "stress stress__img"
+   "memory__img memory"
+   ;
    height: 80%;
    margin: 0 10px;
    overflow-y: scroll;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
    border: 1px solid black;
+
+}
+
+#journal__benefits::-webkit-scrollbar {
+   display: none;
+}
+
+#benefits__title {
+   grid-area: title;
+   font-size: 41px;
+   color: #707070;
+}
+
+#stress__container {
+   grid-area: stress;
+}
+
+#stress__img {
+   grid-area: stress__img;
+   width: 100%;
+   height: 100%;
+   /* object-fit: contain; */
+   background-image: url("../../images/stress.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   border-radius: 17px;
+}
+
+#memory__img {
+   grid-area: memory__img;
+   background-image: url("../../images/memory.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   border-radius: 17px;
+}
+
+#memory__container {
+   grid-area: memory;
 }
