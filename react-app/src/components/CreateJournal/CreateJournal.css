@@ -98,27 +98,34 @@
 
 #stress__container {
    grid-area: stress;
+   margin-right:20px;
 }
 
 #memory__container {
    grid-area: memory;
+   margin-left:20px;
 }
 
 #immune__container {
    grid-area: immune;
+   margin-right:20px;
 }
 
 #mood__container {
    grid-area: mood;
+   margin-left:20px;
 }
 
 #emotion__container {
    grid-area: emotion;
+   margin-right:20px;
 }
 
 
 /* These are the divs that contain the images */
-
+#stress__img__container {
+   margin-left:20px
+}
 
 #stress__img {
    grid-area: stress__img;
@@ -130,6 +137,7 @@
 
 #memory__img__container {
    margin-left:32px;
+   margin-right:20px;
 }
 
 #memory__img {
@@ -142,6 +150,7 @@
 
 #immune__img__container {
    background-color: #7EC3D2;
+   margin-left:20px;
 }
 
 #immune__img {
@@ -152,6 +161,7 @@
 
 #mood__img__container {
    background-color: #FFEFEF;
+   margin-right:20px;
 }
 
 #mood__img {
@@ -163,6 +173,7 @@
 
 #emotion__img__container {
    background-color: #FED66D;
+   margin-left:20px;
 }
 
 #emotion__img {

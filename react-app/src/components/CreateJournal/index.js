@@ -21,7 +21,7 @@ const CreateJournal = () => {
                </p>
             </div>
 
-            <div className="image__container">
+            <div id="stress__img__container" className="image__container">
                <div id="stress__img" className="images"></div>
             </div>
 
