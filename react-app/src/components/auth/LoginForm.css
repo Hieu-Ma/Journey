@@ -57,7 +57,7 @@
    height: 25px;
    width: 391px;
    border-radius: 25px;
-   opacity: 75%;
+   /* opacity: 75%; */
    padding-left: 10px;
    outline: none;
    border: 2px solid #999999;
