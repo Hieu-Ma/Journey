@@ -7,6 +7,7 @@
    margin-left: 80px;
 }
 
+
 #journal__border {
    display: flex;
    align-items: center;
@@ -30,8 +31,112 @@
 
 #journal__benefits {
    display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: 
+   "title title"
+   "stress stress__img"
+   "memory__img memory"
+   "immune immune__img"
+   "mood__img mood"
+   "emotion emotion__img"
+   ;
    height: 80%;
    margin: 0 10px;
    overflow-y: scroll;
-   border: 1px solid black;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+   /* border: 1px solid black; */
+   
+}
+
+
+#journal__benefits::-webkit-scrollbar {
+   display: none;
+}
+
+#benefits__title {
+   grid-area: title;
+   margin: 40px 0px;
+   margin-left: 40px;
+   font-size: 41px;
+   color: #707070;
+}
+
+/* styling used for description containers and images */
+
+.containers {
+   margin: 0 40px;
+}
+
+.images {
+   margin-bottom: 45px;
+   justify-self: center;
+   width: 488px;
+   height: 230px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   border-radius: 17px;
+}
+
+/* Page's styles of the subtitles and descriptions */
+
+#create__journal h3 {
+   margin: 0px;
+   font-size: 24px;
+   color: #707070;
+}
+
+#create__journal p {
+   font-size: 16px;
+   color: #707070;
+}
+
+/* These are the divs that contain the title and description */
+
+#stress__container {
+   grid-area: stress;
+}
+
+#memory__container {
+   grid-area: memory;
+}
+
+#immune__container {
+   grid-area: immune;
+}
+
+#mood__container {
+   grid-area: mood;
+}
+
+
+/* These are the divs that contain the images */
+
+#immune__img {
+   grid-area: immune__img;
+   background-image: url("../../images/flu_image.jpg");
+}
+
+#stress__img {
+   grid-area: stress__img;
+   background-image: url("../../images/stress.jpg");
+}
+
+#memory__img {
+   grid-area: memory__img;
+   background-image: url("../../images/memory.jpg");
+}
+
+#mood__img {
+   grid-area: mood__img;
+   background-image: url("../../images/happy_group.jpg");
+}
+
+#emotion__container {
+   grid-area: emotion;
+}
+
+#emotion__img {
+   grid-area: emotion__img;
+   background-image: url("../../images/happy_girl.png");
 }
