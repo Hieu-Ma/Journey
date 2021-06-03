@@ -9,3 +9,9 @@
    margin-top: 70px;
    margin-left: 80px;
 }
+
+#journal__border {
+   height: 89px;
+   width: 100%;
+   border-bottom: 2px solid #707070;
+}
