@@ -1,0 +1,32 @@
+#journals {
+   /* position:fixed;
+   top: 150px;
+   left: 8%; */
+   display: flex;
+   justify-content: center;
+   width: 394px;
+   height: 70%;
+   border: 2px solid #707070;
+   border-radius: 31px;
+   margin-top: 70px;
+   /* box-sizing:border-box; */
+}
+
+#journals__title {
+   /* position:fixed;
+   top: 150px;
+   left: 8%; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 25px;
+   color: #4E4E4E;
+   width: 500px;
+   /* left:0px; */
+   margin: 5px 15px;
+   
+   height: 80px;
+   border: 2px solid #707070;
+   border-radius: 31px;
+}
+
