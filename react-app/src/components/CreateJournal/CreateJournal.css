@@ -4,14 +4,29 @@
    right: 8%; */
    width: 1158px;
    height: 70%;
-   border: 2px solid #707070;
+   border: 1px solid #707070;
    border-radius: 31px;
    margin-top: 70px;
    margin-left: 80px;
 }
 
 #journal__border {
-   height: 89px;
+   display: flex;
+   align-items: center;
+   height: 84px;
    width: 100%;
-   border-bottom: 2px solid #707070;
+   border-bottom: 1px solid #707070;
+}
+
+#create__button {
+   margin-left: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+   height: 46px;
+   width: 232px;
+   border: 1px solid #8a8a8a;
+   border-radius: 27px;
+   color: #4E4E4E;
 }
