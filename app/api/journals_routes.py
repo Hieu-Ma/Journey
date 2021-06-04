@@ -26,4 +26,4 @@ def create_journal():
    )
    db.session.add(new_journal)
    db.session.commit()
-   return {"creation": "success"}
+   return {"created": new_journal.to_dict()}

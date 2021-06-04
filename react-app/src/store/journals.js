@@ -42,9 +42,10 @@ export const createUserJournal = (title) => async (dispatch) => {
 export default function reducer(state={}, action) {
    switch (action.type) {
        case GET_JOURNALS:
-           return action.journals;
+           return action.journals.journals;
        case CREATE_JOURNAL:
-           return action.journal;
+           let newState = [...state, action.journal.created]
+           return newState;
        default:
            return state;
    }
