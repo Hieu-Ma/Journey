@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_login import current_user
-from app.models import Journal, User
+from app.models import Journal, User, db
 from app.forms import JournalForm
 
 journals_routes = Blueprint('journals', __name__)
@@ -20,8 +20,10 @@ def create_journal():
    Creates a new journal
    """
    form = JournalForm()
-   user_id = current_user.id
-   new_journal = Journal(user_id, form.title.data)
+   new_journal = Journal(
+      user_id= current_user.id,
+      title = form.title.data,
+   )
    db.session.add(new_journal)
    db.session.commit()
    return {"creation": "success"}

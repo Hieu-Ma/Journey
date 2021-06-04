@@ -1,12 +1,60 @@
-import React from 'react';
-import './CreateJournal.css'
+import React, { useState }from 'react';
+import { useDispatch } from 'react-redux';
+import { createUserJournal } from '../../store/journals'
+import Modal from '@material-ui/core/Modal';
+import './CreateJournal.css';
 
 const CreateJournal = () => {
+
+   const dispatch = useDispatch();
+
+   // This useState handles opening the modal
+   const [open, setOpen] = useState(false);
+
+   // This use state handles the value of the title
+   const [title, setTitle] = useState('');
+
+   // Opens Modal
+   const handleOpen = () => {
+      setOpen(true);
+   }
+
+   // Closes Modal
+   const handleClose = () => {
+      setOpen(false);
+   }
+
+   // Creates a new journal
+   const create = (e) => {
+      e.preventDefault();
+      dispatch(createUserJournal(title));
+   }
+
+   const modalContent = (
+      <form onSubmit={create}>
+         <h1>New Journal Title</h1>
+         <input             
+            type="text"
+            name="title"
+            onChange={e => setTitle(e.target.value)}
+            value={title}
+            required
+            ></input>
+         <button type="submit">create</button>
+      </form>
+   )
+
    return (
       <div id="create__journal">
          <div id="journal__border">
-            <div id="create__button">create a new journal!</div>
+            <button id="create__button" onClick={handleOpen}>create a new journal!</button>
          </div>
+         <Modal
+            open={open}
+            onClose={handleClose}
+         >
+            {modalContent}
+         </Modal>
          <div id="journal__benefits">
 
             <div id="benefits__title">Why Journal?</div>
