@@ -1,6 +1,6 @@
 #journals {
-   display: flex;
-   justify-content: center;
+   /* display: flex;
+   justify-content: center; */
    width: 394px;
    height: 70%;
    border: 1px solid #707070;
@@ -19,3 +19,28 @@
    border-bottom: 1px solid #707070;
 }
 
+#journals__container {
+   height: 82%;
+   overflow-y: scroll;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+#journals__container::-webkit-scrollbar {
+   display: none;
+}
+
+#journals__container a {
+   text-decoration: none;
+   color: #1b1b1b;
+}
+
+.journal {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 48px;
+   border: 1px solid #707070;
+   margin: 20px 8%;
+   border-radius: 10px;
+}
