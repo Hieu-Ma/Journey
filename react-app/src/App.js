@@ -46,7 +46,6 @@ function App() {
     return (
       <BrowserRouter>
         <NavBar />
-        {/* <Journals /> */}
         <Switch>
           <Route path="/login" exact={true}>
             <LoginForm />
@@ -55,7 +54,6 @@ function App() {
             <SignUpForm />
           </Route>
           <ProtectedRoute path="/" exact={true} >
-            {/* <CreateJournal /> */}
             <Home />
           </ProtectedRoute>
         </Switch>
