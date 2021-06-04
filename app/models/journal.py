@@ -11,6 +11,6 @@ class Journal(db.Model):
 
    def to_dict(self):
       return {
-         "user_id": self.user_id,
-         "title": self.title_id
+         "id": self.user_id,
+         "title": self.title
       }
