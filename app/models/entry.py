@@ -7,7 +7,7 @@ class Entry(db.Model):
    journal_id = db.Column(db.Integer, db.ForeignKey('journals.id'), nullable = False)
    title = db.Column(db.String(25), nullable = False)
    description = db.Column(db.String(1000), nullable = False)
-   journals = db.relationship('Journal', back_populates='entries')
+   journal = db.relationship('Journal', back_populates='entries')
   
    def to_dict(self):
       return {
