@@ -1,4 +1,4 @@
-#create__journal {
+#journal {
    width: 1158px;
    height: 70%;
    border: 1px solid #707070;
@@ -7,10 +7,13 @@
    margin-left: 80px;
 }
 
-#journal__border {
+#journal__title {
    display: flex;
    align-items: center;
-   height: 84px;
+   justify-content: center;
+   height: 81px;
    width: 100%;
    border-bottom: 1px solid #707070;
+   font-size: 30px;
+   color: #4E4E4E;
 }

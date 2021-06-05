@@ -9,7 +9,7 @@ const ViewJournal = () => {
    let { id } = useParams();
    let journalId = Number(id);
    const journal = useSelector(state => (state.journals.journal))
-   
+
    useEffect(() => {
       dispatch(getUserJournal(journalId))
    },[dispatch, id])
@@ -17,8 +17,8 @@ const ViewJournal = () => {
    if(!journal) return null;
 
    return (
-      <div id="create__journal">
-         <div id="journal__border">
+      <div id="journal">
+         <div id="journal__title">
             {journal.title}
          </div>
  
