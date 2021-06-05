@@ -27,3 +27,11 @@ def create_journal():
    db.session.add(new_journal)
    db.session.commit()
    return {"created": new_journal.to_dict()}
+
+@journals_routes.route("/<id>", methods=['GET'])
+def get_journal(id):
+   """
+   Render's the user's selected journal
+   """
+   journal = Journal.query.get(id)
+   return {"journal": journal.to_dict()}

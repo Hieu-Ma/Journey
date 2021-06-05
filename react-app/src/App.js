@@ -6,7 +6,8 @@ import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/Navbar";
 import Journals from "./components/Journals";
 import Home from "./components/Home";
-import CreateJournal from "./components/CreateJournal"
+import HomeViewJournal from "./components/HomeViewJournal";
+import CreateJournal from "./components/CreateJournal";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/session";
 
@@ -55,6 +56,9 @@ function App() {
           </Route>
           <ProtectedRoute path="/" exact={true} >
             <Home />
+          </ProtectedRoute>
+          <ProtectedRoute path={`/journals/:id`} exact={true} >
+            <HomeViewJournal />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>
