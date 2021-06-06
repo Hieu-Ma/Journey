@@ -20,10 +20,6 @@ const ViewJournal = () => {
    if(journal.user_id !== userId) return (
       <div>Journal does not belong to current user!</div>
    );
-   // console.log(entries)
-   // let test = entries.map( entry => {
-   //    console.log(entry.title)
-   // })
 
    return (
       <div id="journal">
