@@ -26,15 +26,18 @@ const ViewJournal = () => {
          <div id="journal__title">
             {journal.title}
          </div>
- 
-         <div id="journal__entries">
-            {entries.map(entry => (
-               <div className="entry">{entry.title}</div>
-            ))}
-         </div>
-         <div id="journal__buttons">
-            <button className="journal__button">edit</button>
-            <button className="journal__button">delete</button>
+         <div id="entries__container">
+            <div id="journal__entries__container">
+               <div id="journal__entries">
+                  {entries.map(entry => (
+                     <div className="entry">{entry.title}</div>
+                  ))}
+               </div>
+            </div>
+            <div id="journal__buttons">
+               <button id="edit__journal" className="journal__button">edit</button>
+               <button className="journal__button">delete</button>
+            </div>
          </div>
       </div>
    )

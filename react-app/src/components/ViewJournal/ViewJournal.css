@@ -18,13 +18,22 @@
    color: #4E4E4E;
 }
 
+#entries__container {
+   height: 85%;
+   margin: 25px;
+}
+
+#journal__entries__container {
+   height: 85%;
+}
+
 #journal__entries {
+   /* height: 70%; */
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    grid-template-rows: auto;
    justify-items: center;
    row-gap: 20px;
-   margin: 30px 28px 0px 28px;
 }
 
 .entry {
@@ -35,4 +44,21 @@
    height: 48px;
    border: 1px solid #707070;
    border-radius: 10px;
+}
+
+#journal__buttons {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.journal__button {
+   width: 157px;
+   height: 49px;
+   border: 1px solid #707070;
+   border-radius: 15px;
+   background-color: white;
+}
+
+#edit__journal {
+   margin-right: 25px;
 }
