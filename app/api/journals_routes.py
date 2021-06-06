@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_login import current_user
-from app.models import Journal, User, db
+from app.models import Journal, Entry, User, db
 from app.forms import JournalForm
 
 journals_routes = Blueprint('journals', __name__)
@@ -27,3 +27,16 @@ def create_journal():
    db.session.add(new_journal)
    db.session.commit()
    return {"created": new_journal.to_dict()}
+
+@journals_routes.route("/<id>", methods=['GET'])
+def get_journal(id):
+   """
+   Render's the user's selected journal
+   """
+   journal = Journal.query.get(id)
+   entries = Entry.query.filter_by(journal_id=id)
+
+   return {
+      "journal": journal.to_dict(),
+      "entries": [entry.to_dict() for entry in entries]
+      }

@@ -8,7 +8,7 @@ const Journals = () => {
 
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
-  const journals = useSelector(state => Object.values(state?.journals));
+  const journals = useSelector(state => state?.journals?.journals);
 
   useEffect(() => {
     dispatch(userJournals())
