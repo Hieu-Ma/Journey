@@ -8,14 +8,19 @@ const ViewJournal = () => {
    const dispatch = useDispatch();
    let { id } = useParams();
    let journalId = Number(id);
-   const journal = useSelector(state => (state.journals.journal)) 
-   const userId = useSelector(state => (state.sessions.user.id))
+   const journal = useSelector(state => state.journals.journal) 
+   const entries = useSelector(state => state.journals.entries)
+   const userId = useSelector(state => state.session.user.id)
    useEffect(() => {
       dispatch(getUserJournal(journalId))
    },[dispatch, id])
 
-   if(!journal || !userId) return null;
-   // if(journal)
+   if(!journal || !userId || !entries) return null;
+
+   // console.log(entries)
+   // let test = entries.map( entry => {
+   //    console.log(entry.title)
+   // })
 
    return (
       <div id="journal">
@@ -24,7 +29,9 @@ const ViewJournal = () => {
          </div>
  
          <div id="journal__entries">
-
+            {entries.map(entry => (
+               <div className="entry">{entry.title}</div>
+            ))}
          </div>
       </div>
    )

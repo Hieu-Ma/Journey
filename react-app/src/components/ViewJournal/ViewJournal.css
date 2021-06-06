@@ -17,3 +17,22 @@
    font-size: 30px;
    color: #4E4E4E;
 }
+
+#journal__entries {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: auto;
+   justify-items: center;
+   row-gap: 30px;
+   margin: 30px 28px 0px 28px;
+}
+
+.entry {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 220px;
+   height: 48px;
+   border: 1px solid #707070;
+   border-radius: 10px;
+}

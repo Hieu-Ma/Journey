@@ -20,7 +20,8 @@
 }
 
 #journals__container {
-   height: 82%;
+   height: 75%;
+   margin-top:11px;
    overflow-y: scroll;
    -ms-overflow-style: none;
    scrollbar-width: none;

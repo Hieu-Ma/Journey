@@ -64,6 +64,7 @@ export default function reducer(state={}, action) {
            return newState;
        case GET_JOURNAL:
            newState["journal"] = action.journal.journal;
+           newState["entries"] = action.journal.entries;
            return newState
        default:
            return state;
