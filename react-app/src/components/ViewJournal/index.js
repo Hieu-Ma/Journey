@@ -32,6 +32,10 @@ const ViewJournal = () => {
                <div className="entry">{entry.title}</div>
             ))}
          </div>
+         <div id="journal__buttons">
+            <button className="journal__button">edit</button>
+            <button className="journal__button">delete</button>
+         </div>
       </div>
    )
 }
