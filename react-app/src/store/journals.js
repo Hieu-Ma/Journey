@@ -61,6 +61,7 @@ export default function reducer(state={}, action) {
            return newState;
        case CREATE_JOURNAL:
            newState["journals"] = [...state.journals, action.journal.created];
+           newState["journal"] = action.journal.created;
            return newState;
        case GET_JOURNAL:
            newState["journal"] = action.journal.journal;

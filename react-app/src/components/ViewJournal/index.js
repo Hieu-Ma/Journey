@@ -11,12 +11,15 @@ const ViewJournal = () => {
    const journal = useSelector(state => state.journals.journal) 
    const entries = useSelector(state => state.journals.entries)
    const userId = useSelector(state => state.session.user.id)
+   
    useEffect(() => {
       dispatch(getUserJournal(journalId))
    },[dispatch, id])
 
    if(!journal || !userId || !entries) return null;
-
+   if(journal.user_id !== userId) return (
+      <div>Journal does not belong to current user!</div>
+   );
    // console.log(entries)
    // let test = entries.map( entry => {
    //    console.log(entry.title)
