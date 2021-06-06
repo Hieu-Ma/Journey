@@ -11,6 +11,7 @@ class Entry(db.Model):
   
    def to_dict(self):
       return {
+         "id": self.id,
          "journal_id": self.journal_id,
          "title": self.title,
          "description": self.description
