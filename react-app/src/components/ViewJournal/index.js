@@ -1,7 +1,8 @@
 import React, { useState, useEffect }from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
+import { editUserJournal, deleteUserJournal } from '../../store/journals'
 import Modal from '@material-ui/core/Modal';
 import './ViewJournal.css';
 
@@ -18,6 +19,11 @@ const ViewJournal = () => {
    const [openEdit, setOpenEdit] = useState(false);
 
    // This handles the edit journal title modal
+   const editJournal = (e) => {
+      e.preventDefault();
+      dispatch(editUserJournal(journalId, newTitle))
+   }
+
    const handleOpenEdit = () => {
       setOpenEdit(true);
    }
@@ -26,9 +32,9 @@ const ViewJournal = () => {
       setOpenEdit(false);
    }
 
-   const editJournal = (
+   const editJournalModal = (
       <div id="edit__journal__container">
-         <form id="edit__journal">
+         <form id="edit__journal" onSubmit={editJournal}>
             <h1>New Journal Title</h1>
             <input             
                type="text"
@@ -38,7 +44,7 @@ const ViewJournal = () => {
                required
             ></input>
             <div id="edit__journal__buttons">
-               <button >cancel</button>
+               <button onClick={handleCloseEdit}>cancel</button>
                <button id="submit__new__journal" type="submit">submit</button>
             </div>
          </form>
@@ -46,6 +52,12 @@ const ViewJournal = () => {
    ) 
 
    // This handles the delete journal modal
+
+   const deleteJournal = (e) => {
+      e.preventDefault()
+      dispatch(deleteUserJournal(journalId))
+   }
+
    const handleOpenDelete = () => {
       setOpenDelete(true);
    }
@@ -54,12 +66,12 @@ const ViewJournal = () => {
       setOpenDelete(false);
    }
 
-   const deleteJournal = (
+   const deleteJournalModal = (
       <div id="delete__journal__container">
          <h1>Do you want to delete {journal?.title}?</h1>
          <div id="delete__journal__buttons">
-            <button id="cancel__delete">No</button>
-            <button id="confirm__delete">Yes</button>
+            <button id="cancel__delete" onClick={handleCloseDelete}>No</button>
+            <button id="confirm__delete" onClick={deleteJournal}>Yes</button>
          </div>
       </div>
    )
@@ -90,13 +102,13 @@ const ViewJournal = () => {
                open={openEdit}
                onClose={handleCloseEdit}
             >
-               {editJournal}
+               {editJournalModal}
             </Modal>
             <Modal
                open={openDelete}
                onClose={handleCloseDelete}
             >
-               {deleteJournal}
+               {deleteJournalModal}
             </Modal>
             <div id="journal__buttons">
                <button id="edit__journal__button" className="journal__button" onClick={handleOpenEdit}>edit</button>

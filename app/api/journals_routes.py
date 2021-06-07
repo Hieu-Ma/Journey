@@ -40,3 +40,36 @@ def get_journal(id):
       "journal": journal.to_dict(),
       "entries": [entry.to_dict() for entry in entries]
       }
+
+@journals_routes.route("/<id>", methods=['POST'])
+def rename_journal(id):
+   """
+   Renames the user's selected journal
+   """
+   journal = Journal.query.get(id)
+   form = JournalForm()
+   test_journal = Journal(
+      user_id= current_user.id,
+      title = form.title.data,
+   )
+   journal.title = test_journal.title
+   db.session.add(journal)
+   db.session.commit()
+
+   return {
+      "journal": journal.to_dict()
+   }
+
+@journals_routes.route("/<id>", methods=['DELETE'])
+def delete_journal(id):
+   """
+   Renames the user's selected journal
+   """
+   journal = Journal.query.get(id)
+   print('THIS IS THE JOURNAL WERE TRYING TO DELETE', journal)
+   db.session.delete(journal)
+   db.session.commit()
+
+   return {
+      "journal": journal.to_dict()
+   }
