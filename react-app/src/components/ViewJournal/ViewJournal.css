@@ -70,6 +70,75 @@
    background-color: white;
 }
 
-#edit__journal {
+#edit__journal__button {
    margin-right: 25px;
+}
+
+#edit__journal__container {
+   position: static;
+   margin: 210px auto 0px auto;
+   width: 600px;
+   height: 210px;
+   background-color: white;
+   border-radius: 44px;
+   border: 1px solid #707070;
+   display: flex;
+   justify-content: center;
+}
+
+#edit__journal__container h1 {
+   margin: 0px;
+   margin-top: 25px;
+   height: 50px;
+   text-align: center;
+}
+
+#edit__journal input{
+   margin-top: 15px;
+   width: 480px;
+   height: 23px;
+}
+
+#edit__journal__buttons {
+   width: 100%;
+   margin-top: 10px;
+   display: flex;
+   justify-content: flex-end;
+   height: 23px;
+}
+
+#submit__new__journal {
+   margin-left: 7px;
+}
+
+#delete__journal__container {
+   position: static;
+   margin: 210px auto 0px auto;
+   width: 600px;
+   height: 150px;
+   background-color: white;
+   border-radius: 44px;
+   border: 1px solid #707070;
+}
+
+#delete__journal__container h1 {
+   margin: 0px;
+   margin-top: 25px;
+   height: 50px;
+   text-align: center;
+   font-size: 25px;
+}
+
+#delete__journal__buttons {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+#confirm__delete {
+   margin-right:77px;
+}
+
+#cancel__delete {
+   margin-right: 5px;
 }

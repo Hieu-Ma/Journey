@@ -31,16 +31,21 @@ const CreateJournal = () => {
    }
 
    const modalContent = (
-      <form onSubmit={create}>
+      <form onSubmit={create} id="create__journal__form">
          <h1>New Journal Title</h1>
-         <input             
-            type="text"
-            name="title"
-            onChange={e => setTitle(e.target.value)}
-            value={title}
-            required
+         <div id="create__input__container">
+            <input             
+               type="text"
+               name="title"
+               onChange={e => setTitle(e.target.value)}
+               value={title}
+               required
             ></input>
-         <button type="submit">create</button>
+         </div>
+         <div id="create__journal__buttons">
+            <button id="cancel__journal__button">cancel</button>
+            <button id="create__journal__button" type="submit">create</button>
+         </div>
       </form>
    )
 

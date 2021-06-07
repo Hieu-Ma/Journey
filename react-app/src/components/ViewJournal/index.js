@@ -27,17 +27,22 @@ const ViewJournal = () => {
    }
 
    const editJournal = (
-      <form>
-         <h1>New Journal Title</h1>
-         <input             
-            type="text"
-            name="newTitle"
-            onChange={e => setNewTitle(e.target.value)}
-            value={newTitle}
-            required
+      <div id="edit__journal__container">
+         <form id="edit__journal">
+            <h1>New Journal Title</h1>
+            <input             
+               type="text"
+               name="newTitle"
+               onChange={e => setNewTitle(e.target.value)}
+               value={newTitle}
+               required
             ></input>
-         <button type="submit">create</button>
-      </form>
+            <div id="edit__journal__buttons">
+               <button >cancel</button>
+               <button id="submit__new__journal" type="submit">submit</button>
+            </div>
+         </form>
+      </div>
    ) 
 
    // This handles the delete journal modal
@@ -50,11 +55,13 @@ const ViewJournal = () => {
    }
 
    const deleteJournal = (
-      <form>
+      <div id="delete__journal__container">
          <h1>Do you want to delete {journal?.title}?</h1>
-         <button>No</button>
-         <button>Yes</button>
-      </form>
+         <div id="delete__journal__buttons">
+            <button id="cancel__delete">No</button>
+            <button id="confirm__delete">Yes</button>
+         </div>
+      </div>
    )
 
    useEffect(() => {
@@ -92,7 +99,7 @@ const ViewJournal = () => {
                {deleteJournal}
             </Modal>
             <div id="journal__buttons">
-               <button id="edit__journal" className="journal__button" onClick={handleOpenEdit}>edit</button>
+               <button id="edit__journal__button" className="journal__button" onClick={handleOpenEdit}>edit</button>
                <button className="journal__button" onClick={handleOpenDelete}>delete</button>
             </div>
          </div>
