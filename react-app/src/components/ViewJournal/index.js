@@ -2,6 +2,7 @@ import React, { useState, useEffect }from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
+import Modal from '@material-ui/core/Modal';
 import './ViewJournal.css';
 
 const ViewJournal = () => {
@@ -12,9 +13,11 @@ const ViewJournal = () => {
    const entries = useSelector(state => state.journals.entries)
    const userId = useSelector(state => state.session.user.id)
    
-   // This handles the edit journal title modal
+   const [newTitle, setNewTitle] = useState('');
+   const [openDelete, setOpenDelete] = useState(false);
    const [openEdit, setOpenEdit] = useState(false);
 
+   // This handles the edit journal title modal
    const handleOpenEdit = () => {
       setOpenEdit(true);
    }
@@ -28,9 +31,9 @@ const ViewJournal = () => {
          <h1>New Journal Title</h1>
          <input             
             type="text"
-            name="title"
-            // onChange={e => setTitle(e.target.value)}
-            // value={title}
+            name="newTitle"
+            onChange={e => setNewTitle(e.target.value)}
+            value={newTitle}
             required
             ></input>
          <button type="submit">create</button>
@@ -38,8 +41,6 @@ const ViewJournal = () => {
    ) 
 
    // This handles the delete journal modal
-   const [openDelete, setOpenDelete] = useState(false);
-
    const handleOpenDelete = () => {
       setOpenDelete(true);
    }
@@ -51,14 +52,8 @@ const ViewJournal = () => {
    const deleteJournal = (
       <form>
          <h1>Do you want to delete {journal?.title}?</h1>
-         <input             
-            type="text"
-            name="title"
-            // onChange={e => setTitle(e.target.value)}
-            // value={title}
-            required
-            ></input>
-         <button type="submit">delete</button>
+         <button>No</button>
+         <button>Yes</button>
       </form>
    )
 
@@ -84,9 +79,21 @@ const ViewJournal = () => {
                   ))}
                </div>
             </div>
+            <Modal
+               open={openEdit}
+               onClose={handleCloseEdit}
+            >
+               {editJournal}
+            </Modal>
+            <Modal
+               open={openDelete}
+               onClose={handleCloseDelete}
+            >
+               {deleteJournal}
+            </Modal>
             <div id="journal__buttons">
-               <button id="edit__journal" className="journal__button">edit</button>
-               <button className="journal__button">delete</button>
+               <button id="edit__journal" className="journal__button" onClick={handleOpenEdit}>edit</button>
+               <button className="journal__button" onClick={handleOpenDelete}>delete</button>
             </div>
          </div>
       </div>
