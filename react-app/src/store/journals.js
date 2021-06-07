@@ -104,12 +104,13 @@ export default function reducer(state={}, action) {
            newState["journal"] = action.journal.created;
            return newState;
        case EDIT_JOURNAL:
-          newState["journals"] = [...state.journals, action.journal.journal];
+          let updatedJournalsEdit = state.journals.filter(obj => obj.id !== action.journal.journal.id)
+          newState["journals"] = [ action.journal.journal, ...updatedJournalsEdit];
           newState["journal"] = action.journal.journal;
           return newState;
       case DELETE_JOURNAL:
-          const updatedJournals = state.journals.filter(obj => obj.id !== action.journal.journal.id)
-          newState["journals"] = [...updatedJournals];
+          let updatedJournalsDelete = state.journals.filter(obj => obj.id !== action.journal.journal.id)
+          newState["journals"] = [...updatedJournalsDelete];
           newState["deleted"] = action.journal.journal;
        case GET_JOURNAL:
            newState["journal"] = action.journal.journal;
