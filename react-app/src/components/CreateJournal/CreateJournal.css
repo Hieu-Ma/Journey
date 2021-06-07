@@ -1,6 +1,6 @@
 #create__journal {
    width: 1158px;
-   height: 70%;
+   height: 690px;
    border: 1px solid #707070;
    border-radius: 31px;
    margin-top: 70px;
@@ -56,7 +56,6 @@
    /* border: 1px solid black; */
    
 }
-
 
 #journal__benefits::-webkit-scrollbar {
    display: none;
@@ -190,4 +189,48 @@
    background-image: url("../../images/happy_girl.png");
    width: 345px;
    height: 230px;
+}
+
+#create__journal__form {
+   position: static;
+   margin: 210px auto 0px auto;
+   width: 600px;
+   height: 170px;
+   background-color: white;
+   border-radius: 44px;
+   border: 1px solid #707070;
+}
+
+#create__journal__form h1 {
+   margin: 0px;
+   margin-top: 25px;
+   height: 50px;
+   text-align: center;
+   font-size: 25px;
+}
+
+#create__journal__form input {
+   width: 480px;
+   height: 23px;
+}
+
+#create__input__container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+#create__journal__buttons {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 10px;
+}
+
+#create__journal__button {
+   margin-right: 55px;
+}
+
+#cancel__journal__button {
+   margin-right: 6px;
 }

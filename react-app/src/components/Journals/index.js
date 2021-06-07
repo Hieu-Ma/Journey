@@ -21,7 +21,7 @@ const Journals = () => {
       <div id="journals__title">Journals</div>
       <div id="journals__container">
         {journals.map(journal => (
-          <NavLink to={`/journals/${journal.id}`}><div className="journal">{journal.title}</div></NavLink>
+          <NavLink  key={journal.id} to={`/journals/${journal.id}`}><div className="journal">{journal.title}</div></NavLink>
         ))}
       </div>
     </div>
