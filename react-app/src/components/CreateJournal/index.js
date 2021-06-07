@@ -28,6 +28,7 @@ const CreateJournal = () => {
    const create = (e) => {
       e.preventDefault();
       dispatch(createUserJournal(title));
+      handleClose();
    }
 
    const modalContent = (
@@ -43,7 +44,7 @@ const CreateJournal = () => {
             ></input>
          </div>
          <div id="create__journal__buttons">
-            <button id="cancel__journal__button">cancel</button>
+            <button id="cancel__journal__button" onClick={handleClose}>cancel</button>
             <button id="create__journal__button" type="submit">create</button>
          </div>
       </form>

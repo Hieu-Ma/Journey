@@ -1,18 +1,19 @@
 import React, { useState, useEffect }from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
-import { editUserJournal, deleteUserJournal } from '../../store/journals'
+import { editUserJournal, deleteUserJournal } from '../../store/journals';
 import Modal from '@material-ui/core/Modal';
 import './ViewJournal.css';
 
 const ViewJournal = () => {
+   let history = useHistory();
    const dispatch = useDispatch();
    let { id } = useParams();
    let journalId = Number(id);
-   const journal = useSelector(state => state.journals.journal) 
-   const entries = useSelector(state => state.journals.entries)
-   const userId = useSelector(state => state.session.user.id)
+   const journal = useSelector(state => state.journals.journal); 
+   const entries = useSelector(state => state.journals.entries);
+   const userId = useSelector(state => state.session.user.id);
    
    const [newTitle, setNewTitle] = useState('');
    const [openDelete, setOpenDelete] = useState(false);
@@ -21,7 +22,7 @@ const ViewJournal = () => {
    // This handles the edit journal title modal
    const editJournal = (e) => {
       e.preventDefault();
-      dispatch(editUserJournal(journalId, newTitle))
+      dispatch(editUserJournal(journalId, newTitle));
    }
 
    const handleOpenEdit = () => {
@@ -54,8 +55,9 @@ const ViewJournal = () => {
    // This handles the delete journal modal
 
    const deleteJournal = (e) => {
-      e.preventDefault()
-      dispatch(deleteUserJournal(journalId))
+      e.preventDefault();
+      dispatch(deleteUserJournal(journalId));
+      history.push("/");
    }
 
    const handleOpenDelete = () => {
@@ -77,8 +79,8 @@ const ViewJournal = () => {
    )
 
    useEffect(() => {
-      dispatch(getUserJournal(journalId))
-   },[dispatch, id])
+      dispatch(getUserJournal(journalId));
+   },[dispatch, id]);
 
    if(!journal || !userId || !entries) return null;
    if(journal.user_id !== userId) return (
