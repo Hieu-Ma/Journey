@@ -8,7 +8,7 @@ import 'react-quill/dist/quill.snow.css';
 import Modal from '@material-ui/core/Modal';
 import './CreateEntry.css';
 
-const ViewJournal = () => {
+const CreateEntry = () => {
    let history = useHistory();
    const dispatch = useDispatch();
    let { id } = useParams();
@@ -86,4 +86,4 @@ const ViewJournal = () => {
    )
 }
 
-export default ViewJournal;
+export default CreateEntry;

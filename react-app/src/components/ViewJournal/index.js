@@ -104,7 +104,9 @@ const ViewJournal = () => {
             <div id="journal__entries__container">
                <div id="journal__entries">
                   {entries.map(entry => (
-                     <div key={`${entry.id}+${entry.title}` } className="entry">{entry.title}</div>
+                     <NavLink className="entry__link" to={`/entries/${entry.id}`}>
+                        <div key={`${entry.id}+${entry.title}` } className="entry">{entry.title}</div>
+                     </NavLink>
                   ))}
                </div>
             </div>

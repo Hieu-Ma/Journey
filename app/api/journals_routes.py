@@ -4,7 +4,7 @@ from app.models import Journal, Entry, User, db
 from app.forms import JournalForm
 from app.forms import EntryForm
 
-journals_routes = Blueprint('journals', __name__)
+journals_routes = Blueprint("journals", __name__)
 
 @journals_routes.route("", methods=['GET'])
 def journals():
@@ -67,7 +67,6 @@ def delete_journal(id):
    Renames the user's selected journal
    """
    journal = Journal.query.get(id)
-   print('THIS IS THE JOURNAL WERE TRYING TO DELETE', journal)
    db.session.delete(journal)
    db.session.commit()
 

@@ -142,8 +142,6 @@ export default function reducer(state={}, action) {
          newState["entries"] = action.journal.entries;
          return newState;
       case CREATE_ENTRY:
-         // let test = [state.journals.entries]
-         // console.log('WHAT IS THIS', test)
          newState["newEntry"] = action.entry.entry;
          return newState;
       default:
