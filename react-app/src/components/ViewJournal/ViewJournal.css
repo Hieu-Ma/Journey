@@ -16,6 +16,9 @@
    font-size: 28px;
    color: #4E4E4E;
 }
+#journal__title__container a{
+   align-self: center;
+}
 
 #create__entry {
    display: flex;

@@ -4,6 +4,7 @@ const CREATE_JOURNAL = 'journals/CREATE_JOURNAL';
 const EDIT_JOURNAL = 'journals/EDIT_JOURNAL';
 const DELETE_JOURNAL = 'journals/DELETE_JOURNAL';
 const GET_JOURNAL = 'journals/GET_JOURNAL';
+const CREATE_ENTRY = 'journals/CREATE_ENTRY'
 
 const getJournals = (journals) => ({
    type: GET_JOURNALS,
@@ -28,6 +29,11 @@ const deleteJournal = (journal) => ({
 const getJournal = (journal) => ({
    type: GET_JOURNAL,
    journal
+})
+
+const createEntry = (entry) => ({
+   type: CREATE_ENTRY,
+   entry
 })
 
 export const userJournals = () => async (dispatch) => {
@@ -96,27 +102,27 @@ export const deleteUserJournal = (id) => async (dispatch) => {
 export default function reducer(state={}, action) {
    let newState = {...state}
    switch (action.type) {
-       case GET_JOURNALS:
-           newState["journals"] = action.journals.journals;
-           return newState;
-       case CREATE_JOURNAL:
-           newState["journals"] = [...state.journals, action.journal.created];
-           newState["journal"] = action.journal.created;
-           return newState;
-       case EDIT_JOURNAL:
-           let updatedJournalsEdit = state.journals.filter(obj => obj.id !== action.journal.journal.id)
-           newState["journals"] = [...updatedJournalsEdit, action.journal.journal];
-           newState["journal"] = action.journal.journal;
-           return newState;
+      case GET_JOURNALS:
+         newState["journals"] = action.journals.journals;
+         return newState;
+      case CREATE_JOURNAL:
+         newState["journals"] = [...state.journals, action.journal.created];
+         newState["journal"] = action.journal.created;
+         return newState;
+      case EDIT_JOURNAL:
+         let updatedJournalsEdit = state.journals.filter(obj => obj.id !== action.journal.journal.id)
+         newState["journals"] = [...updatedJournalsEdit, action.journal.journal];
+         newState["journal"] = action.journal.journal;
+         return newState;
       case DELETE_JOURNAL:
-           let updatedJournalsDelete = state.journals.filter(obj => obj.id !== action.journal.journal.id)
-           newState["journals"] = [...updatedJournalsDelete];
-           newState["deleted"] = action.journal.journal;
-       case GET_JOURNAL:
-           newState["journal"] = action.journal.journal;
-           newState["entries"] = action.journal.entries;
-           return newState
-       default:
-           return state;
+         let updatedJournalsDelete = state.journals.filter(obj => obj.id !== action.journal.journal.id)
+         newState["journals"] = [...updatedJournalsDelete];
+         newState["deleted"] = action.journal.journal;
+      case GET_JOURNAL:
+         newState["journal"] = action.journal.journal;
+         newState["entries"] = action.journal.entries;
+         return newState
+      default:
+         return state;
    }
 }

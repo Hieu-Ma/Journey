@@ -8,9 +8,9 @@ import Journals from "./components/Journals";
 import Home from "./components/Home";
 import HomeViewJournal from "./components/HomeViewJournal";
 import CreateJournal from "./components/CreateJournal";
+import HomeCreateEntry from "./components/HomeCreateEntry";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/session";
-
 function App() {
   const user = useSelector(state => state.session.user)
   const [loaded, setLoaded] = useState(false);
@@ -59,6 +59,9 @@ function App() {
           </ProtectedRoute>
           <ProtectedRoute path={`/journals/:id`} exact={true} >
             <HomeViewJournal />
+          </ProtectedRoute>
+          <ProtectedRoute path={`/journals/:id/create`} exact={true} >
+            <HomeCreateEntry />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

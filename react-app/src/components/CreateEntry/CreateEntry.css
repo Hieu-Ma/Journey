@@ -1,0 +1,63 @@
+#journal {
+   width: 1158px;
+   height: 690px;
+   border: 1px solid #707070;
+   border-radius: 31px;
+   margin-top: 65px;
+   margin-left: 80px;
+}
+
+#journal__title__container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   height: 81px;
+   width: 100%;
+   border-bottom: 1px solid #707070;
+   font-size: 28px;
+   color: #4E4E4E;
+}
+
+#create__entry {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-self: flex-start;
+   align-self: center;
+   width: 50px;
+   height: 50px;
+   margin-top: 4px;
+   margin-left: 18px;
+   border: 1px solid #707070;
+   border-radius: 25px;
+}
+
+#journal__title {
+   justify-self: center;
+   align-self: center;
+}
+
+#entries__container {
+   height: 85%;
+   margin: 30px;
+}
+
+.quill {
+   margin-top: 15px;
+}
+
+.ql-container.ql-snow {
+   height: 450px;
+   /* overflow-y: scroll; */
+}
+
+/* .quill {
+   height: 500px;
+} */
+/* 
+#entries__container form {
+   height: 500px;
+}
+
+#word__processor {
+   height: 400px;
+} */
