@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import HomeViewJournal from "./components/HomeViewJournal";
 import CreateJournal from "./components/CreateJournal";
 import HomeCreateEntry from "./components/HomeCreateEntry";
+import HomeViewEntry from "./components/HomeViewEntry";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/session";
 function App() {
@@ -62,6 +63,9 @@ function App() {
           </ProtectedRoute>
           <ProtectedRoute path={`/journals/:id/create`} exact={true} >
             <HomeCreateEntry />
+          </ProtectedRoute>
+          <ProtectedRoute path={`/entries/:id`} exact={true} >
+            <HomeViewEntry />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

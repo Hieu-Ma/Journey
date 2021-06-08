@@ -65,6 +65,11 @@
    row-gap: 20px;
 }
 
+.entry__link {
+   text-decoration: none;
+   color: black;
+}
+
 .entry {
    display: flex;
    justify-content: center;
