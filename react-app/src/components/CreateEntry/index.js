@@ -1,9 +1,10 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect, useRef }from 'react';
 import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
 import { createJournalEntry } from '../../store/journals';
 import ReactQuill, { Quill } from 'react-quill';
+import { Editor } from '@tinymce/tinymce-react';
 import 'react-quill/dist/quill.snow.css';
 import Modal from '@material-ui/core/Modal';
 import './CreateEntry.css';
@@ -18,8 +19,15 @@ const CreateEntry = () => {
    const userId = useSelector(state => state.session.user.id);
    const [description, setDescription] = useState('');
    const [title, setTitle] = useState('');
-   // console.log(text)
-   // console.log(title)
+   const editorRef = useRef(null);
+   console.log(description)
+   const log = () => {
+     if (editorRef.current) {
+       console.log(editorRef.current.getContent());
+       setDescription(editorRef.current.getContent());
+     }
+   };
+
    useEffect(() => {
       dispatch(getUserJournal(journalId));
    },[dispatch, id]);
@@ -28,11 +36,11 @@ const CreateEntry = () => {
    if(journal.user_id !== userId) return (
       <div>Journal does not belong to current user!</div>
    );
-   
+  
    const createEntry = (e) => {
       e.preventDefault();
       dispatch(createJournalEntry(journalId, title, description))
-      history.push(`/journals/${journalId}`)
+      // history.push(`/journals/${journalId}`)
    }
 
    const modules = {
@@ -65,6 +73,7 @@ const CreateEntry = () => {
             <div id="journal__title">{journal.title}</div>
          </div>
          <div id="entries__container">
+            {/* <form> */}
             <form onSubmit={createEntry}>
                <input
                   placeholder="Title"
@@ -72,13 +81,35 @@ const CreateEntry = () => {
                   onChange={e => setTitle(e.target.value)}
                >
                </input>
-               <ReactQuill
+               {/* <ReactQuill
                   modules={modules}
                   formats={formats}
                   value={description}
+                  // readOnly={true}
                   onChange={setDescription}
                >
-               </ReactQuill>
+               </ReactQuill> */}
+               <Editor
+                  apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
+                  onInit={(evt, editor) => editorRef.current = editor}
+                  // onChange={setDescription}
+                  // initialValue="<p>This is the initial content of the editor.</p>"
+                  init={{
+                    height: 500,
+                    menubar: false,
+                    plugins: [
+                      'advlist autolink lists link image charmap print preview anchor',
+                      'searchreplace visualblocks code fullscreen',
+                      'insertdatetime media table paste code help wordcount'
+                    ],
+                    toolbar: 'undo redo | formatselect | ' +
+                    'bold italic backcolor | alignleft aligncenter ' +
+                    'alignright alignjustify | bullist numlist outdent indent | ' +
+                    'removeformat | help',
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                  }}
+                />
+               <button onClick={log}>Log editor content</button>
                <button type="submit">create</button>
             </form>
          </div>

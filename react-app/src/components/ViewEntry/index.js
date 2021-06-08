@@ -7,6 +7,7 @@ import { getUserEntry } from "../../store/entries"
 import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Modal from '@material-ui/core/Modal';
+import 'react-quill/dist/quill.snow.css'; // ES6
 import './ViewEntry.css';
 
 const ViewEntry = () => {
@@ -22,17 +23,17 @@ const ViewEntry = () => {
       dispatch(getUserEntry(entryId))
    },[dispatch, id]);
 
-   if(!journal || !userId || !entries) return null;
+   if(!journal || !userId || !entries || !entry) return null;
    if(journal.user_id !== userId) return (
       <div>Journal does not belong to current user!</div>
    );
    
    console.log(entry.description)
-   function content() {
-      return (
-         entry.description
-      )
-   }
+   // function content() {
+   //    return (
+   //       entry.description
+   //    )
+   // }
 
    return (
       <div id="journal">
@@ -50,7 +51,8 @@ const ViewEntry = () => {
          <div id="entries__container">
             <div id="entry__title">{entry.title}</div>
             <div id="entry__description">
-               {entry.description}
+               <div dangerouslySetInnerHTML={{__html: entry.description}}></div>
+               {/* {entry.description} */}
             </div>
          </div>
       </div>
