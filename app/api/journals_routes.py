@@ -88,4 +88,4 @@ def create_entry(id):
    )
    db.session.add(new_entry)
    db.session.commit()
-   return {"created": new_entry.to_dict()}
+   return {"entry": new_entry.to_dict()}
