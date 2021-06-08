@@ -99,6 +99,24 @@ export const deleteUserJournal = (id) => async (dispatch) => {
    dispatch(deleteJournal(data));
 }
 
+export const createJournalEntry = (id, title, description) => async (dispatch) => {
+   const response = await fetch(`/api/journals/${id}/create`, {
+      method: "POST",
+      headers: {
+         "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+         title,
+         description
+      }),
+   });
+   const data = await response.json();
+   if(data.errors) {
+      return data;
+   }
+   dispatch(createEntry(data));
+}
+
 export default function reducer(state={}, action) {
    let newState = {...state}
    switch (action.type) {
@@ -118,10 +136,16 @@ export default function reducer(state={}, action) {
          let updatedJournalsDelete = state.journals.filter(obj => obj.id !== action.journal.journal.id)
          newState["journals"] = [...updatedJournalsDelete];
          newState["deleted"] = action.journal.journal;
+         return newState;
       case GET_JOURNAL:
          newState["journal"] = action.journal.journal;
          newState["entries"] = action.journal.entries;
-         return newState
+         return newState;
+      case CREATE_ENTRY:
+         // let test = [state.journals.entries]
+         // console.log('WHAT IS THIS', test)
+         newState["newEntry"] = action.entry.entry;
+         return newState;
       default:
          return state;
    }

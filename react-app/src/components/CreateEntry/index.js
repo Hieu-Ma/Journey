@@ -2,7 +2,7 @@ import React, { useState, useEffect }from 'react';
 import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
-import { editUserJournal, deleteUserJournal } from '../../store/journals';
+import { createJournalEntry } from '../../store/journals';
 import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Modal from '@material-ui/core/Modal';
@@ -16,9 +16,10 @@ const ViewJournal = () => {
    const journal = useSelector(state => state.journals.journal); 
    const entries = useSelector(state => state.journals.entries);
    const userId = useSelector(state => state.session.user.id);
-   const [text, setText] = useState('')
-   console.log(text)
-
+   const [description, setDescription] = useState('');
+   const [title, setTitle] = useState('');
+   // console.log(text)
+   // console.log(title)
    useEffect(() => {
       dispatch(getUserJournal(journalId));
    },[dispatch, id]);
@@ -28,6 +29,12 @@ const ViewJournal = () => {
       <div>Journal does not belong to current user!</div>
    );
    
+   const createEntry = (e) => {
+      e.preventDefault();
+      dispatch(createJournalEntry(journalId, title, description))
+      history.push(`/journals/${journalId}`)
+   }
+
    const modules = {
       toolbar: [
         [{ 'header': [1, 2, false] }],
@@ -58,19 +65,23 @@ const ViewJournal = () => {
             <div id="journal__title">{journal.title}</div>
          </div>
          <div id="entries__container">
-            <form>
+            <form onSubmit={createEntry}>
                <input
                   placeholder="Title"
+                  value={title}
+                  onChange={e => setTitle(e.target.value)}
                >
                </input>
                <ReactQuill
                   modules={modules}
                   formats={formats}
-                  value={text}
-                  onChange={setText}
+                  value={description}
+                  onChange={setDescription}
                >
                </ReactQuill>
+               {/* <NavLink to={`/journals/${journalId}`}> */}
                <button type="submit">create</button>
+               {/* </NavLink> */}
             </form>
          </div>
       </div>

@@ -2,6 +2,7 @@ from flask import Blueprint
 from flask_login import current_user
 from app.models import Journal, Entry, User, db
 from app.forms import JournalForm
+from app.forms import EntryForm
 
 journals_routes = Blueprint('journals', __name__)
 
@@ -73,3 +74,18 @@ def delete_journal(id):
    return {
       "journal": journal.to_dict()
    }
+
+@journals_routes.route("/<id>/create", methods=['POST'])
+def create_entry(id):
+   """
+   Creates a entry on the selected journal
+   """
+   form = EntryForm()
+   new_entry = Entry(
+      journal_id = id,
+      title = form.title.data,
+      description = form.description.data,
+   )
+   db.session.add(new_entry)
+   db.session.commit()
+   return {"entry": new_entry.to_dict()}
