@@ -79,9 +79,7 @@ const ViewJournal = () => {
                   onChange={setDescription}
                >
                </ReactQuill>
-               {/* <NavLink to={`/journals/${journalId}`}> */}
                <button type="submit">create</button>
-               {/* </NavLink> */}
             </form>
          </div>
       </div>
