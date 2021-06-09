@@ -67,6 +67,9 @@ function App() {
           <ProtectedRoute path={`/entries/:id`} exact={true} >
             <HomeViewEntry />
           </ProtectedRoute>
+          <ProtectedRoute path={`/entries/:id/create`} exact={true} >
+            <HomeViewEntry />
+          </ProtectedRoute>
         </Switch>
       </BrowserRouter>
     );

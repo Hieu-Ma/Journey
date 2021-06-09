@@ -48,7 +48,7 @@ const ViewEntry = () => {
             </div>
          </div>
          <div id="edit__journal__buttons">
-               <button>edit</button>
+               <NavLink to={`/entries/${entry.id}/edit`}><button>edit</button></NavLink>
                <button id="submit__new__journal" type="submit">delete</button>
             </div>
       </div>
