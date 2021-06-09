@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef }from 'react';
 import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
-import { createJournalEntry } from '../../store/journals';
+// import { createJournalEntry } from '../../store/journals';
+import { editUserEntry, getUserEntry } from '../../store/entries';
 import ReactQuill, { Quill } from 'react-quill';
 import { Editor } from '@tinymce/tinymce-react';
 import 'react-quill/dist/quill.snow.css';
@@ -12,53 +13,59 @@ import './EditEntry.css';
 const EditEntry = () => {
    let history = useHistory();
    const dispatch = useDispatch();
+   const editorRef = useRef(null);
+
    let { id } = useParams();
-   let journalId = Number(id);
-   const journal = useSelector(state => state.journals.journal); 
-   const entries = useSelector(state => state.journals.entries);
-   const userId = useSelector(state => state.session.user.id);
+   let entryId = Number(id);
+   
+   // const journal = useSelector(state => state.journals.journal); 
+   const entry = useSelector(state => state.entries.entry);
+   
    const [description, setDescription] = useState('');
    const [title, setTitle] = useState('');
-   const editorRef = useRef(null);
-   console.log(description)
+   
+   // saves the value of the word processor
    const log = () => {
-     if (editorRef.current) {
-       setDescription(editorRef.current.getContent());
-     }
+      if (editorRef.current) {
+         setDescription(editorRef.current.getContent());
+      }
    };
+   
+   useEffect(() => {
+      dispatch(getUserEntry(entryId))
+   },[dispatch]);
 
    useEffect(() => {
-      dispatch(getUserJournal(journalId));
-   },[dispatch, id]);
+      if(entry) {
+         setTitle(entry.title)
+      }
+   },[entry]);
+   
+   if(!entry) return null;
 
-   if(!journal || !userId || !entries) return null;
-   if(journal.user_id !== userId) return (
-      <div>Journal does not belong to current user!</div>
-   );
-  
-   const createEntry = (e) => {
+   const updateEntry = (e) => {
       e.preventDefault();
-      dispatch(createJournalEntry(journalId, title, description))
-      history.push(`/journals/${journalId}`)
+      dispatch(editUserEntry(entryId, title, description))
+      history.push(`/journals/${entry?.journal_id}`)
    }
 
    const modules = {
       toolbar: [
-        [{ 'header': [1, 2, false] }],
-        ['bold', 'italic', 'underline','strike', 'blockquote'],
-        [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-        [{ 'align': [] }],
-        ['link', 'image'],
-        ['clean']
+         [{ 'header': [1, 2, false] }],
+         ['bold', 'italic', 'underline','strike', 'blockquote'],
+         [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+         [{ 'align': [] }],
+         ['link', 'image'],
+         ['clean']
       ],
-    }
-  
-    const formats = [
-      'header',
-      'bold', 'italic', 'underline', 'strike', 'blockquote',
-      'list', 'bullet', 'indent', 'align',
-      'link', 'image'
-    ]
+   }
+      
+   const formats = [
+     'header',
+     'bold', 'italic', 'underline', 'strike', 'blockquote',
+     'list', 'bullet', 'indent', 'align',
+     'link', 'image'
+   ]
 
    return (
       <div id="journal">
@@ -69,19 +76,20 @@ const EditEntry = () => {
                <line id="Line_7" data-name="Line 7" x2="21.37" transform="translate(1 11.582)" fill="none" stroke="#646464" stroke-linecap="round" stroke-width="2"/>
                </svg>
             </button>
-            <div id="journal__title">{journal.title}</div>
+            <div id="journal__title">{entry.journal_title}</div>
          </div>
          <div id="entries__container">
-            <form onSubmit={createEntry}>
+            <form onSubmit={updateEntry}>
                <input
                   placeholder="Title"
                   value={title}
                   onChange={e => setTitle(e.target.value)}
-               >
+                  >
                </input>
                <Editor
                   apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
                   onInit={(evt, editor) => editorRef.current = editor}
+                  initialValue={entry.description}
                   init={{
                     height: 500,
                     menubar: false,
@@ -97,7 +105,7 @@ const EditEntry = () => {
                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                   }}
                 />
-                <button type="submit" onClick={log}>cancel</button>
+                <button type="submit">cancel</button>
                <button type="submit" onClick={log}>submit</button>
             </form>
          </div>

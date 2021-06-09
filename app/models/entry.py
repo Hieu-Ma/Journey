@@ -13,6 +13,7 @@ class Entry(db.Model):
       return {
          "id": self.id,
          "journal_id": self.journal_id,
+         "journal_title": self.journal.title,
          "title": self.title,
          "description": self.description
       }
