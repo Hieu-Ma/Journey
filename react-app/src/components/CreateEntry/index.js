@@ -23,7 +23,6 @@ const CreateEntry = () => {
    console.log(description)
    const log = () => {
      if (editorRef.current) {
-      //  console.log(editorRef.current.getContent());
        setDescription(editorRef.current.getContent());
      }
    };
@@ -73,7 +72,6 @@ const CreateEntry = () => {
             <div id="journal__title">{journal.title}</div>
          </div>
          <div id="entries__container">
-            {/* <form> */}
             <form onSubmit={createEntry}>
                <input
                   placeholder="Title"
@@ -81,19 +79,9 @@ const CreateEntry = () => {
                   onChange={e => setTitle(e.target.value)}
                >
                </input>
-               {/* <ReactQuill
-                  modules={modules}
-                  formats={formats}
-                  value={description}
-                  // readOnly={true}
-                  onChange={setDescription}
-               >
-               </ReactQuill> */}
                <Editor
                   apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
                   onInit={(evt, editor) => editorRef.current = editor}
-                  // onChange={setDescription}
-                  // initialValue="<p>This is the initial content of the editor.</p>"
                   init={{
                     height: 500,
                     menubar: false,
@@ -109,7 +97,6 @@ const CreateEntry = () => {
                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                   }}
                 />
-               {/* <button onClick={log}>Log editor content</button> */}
                <button type="submit" onClick={log}>create</button>
             </form>
          </div>
