@@ -10,6 +10,11 @@
    right: 8%;
 }
 
+#journal__title a{
+   color:#4E4E4E;
+   text-decoration: none;
+}
+
 @media screen and (min-width: 1960px) {
    #journal {
       width: 1260px;

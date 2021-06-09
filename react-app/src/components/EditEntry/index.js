@@ -76,7 +76,7 @@ const EditEntry = () => {
                <line id="Line_7" data-name="Line 7" x2="21.37" transform="translate(1 11.582)" fill="none" stroke="#646464" stroke-linecap="round" stroke-width="2"/>
                </svg>
             </button>
-            <div id="journal__title">{entry.journal_title}</div>
+            <div id="journal__title"><NavLink to={`/journals/${entry.journal_id}`}>{entry.journal_title}</NavLink></div>
          </div>
          <div id="entries__container">
             <form onSubmit={updateEntry}>
