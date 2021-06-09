@@ -43,14 +43,14 @@
    height: 80%;
    margin: 0 10px;
    overflow-y: scroll;
-   -ms-overflow-style: none;
-   scrollbar-width: none;
+   /* -ms-overflow-style: none;
+   scrollbar-width: none; */
    /* border: 1px solid black; */
 }
 
-#journal__benefits::-webkit-scrollbar {
+/* #journal__benefits::-webkit-scrollbar {
    display: none;
-}
+} */
 
 #benefits__title {
    grid-area: title;

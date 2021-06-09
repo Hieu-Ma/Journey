@@ -24,13 +24,13 @@
    height: 480px;
    margin-top: 31px;
    overflow-y: scroll;
-   -ms-overflow-style: none;
-   scrollbar-width: none;
+   /* -ms-overflow-style: none;
+   scrollbar-width: none; */
 }
-
+/* 
 #journals__container::-webkit-scrollbar {
    display: none;
-}
+} */
 
 #journals__container a {
    text-decoration: none;

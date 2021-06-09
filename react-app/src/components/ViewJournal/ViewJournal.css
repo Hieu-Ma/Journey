@@ -41,12 +41,12 @@
    margin: 10px 0px;
    margin-bottom: 0px;
    overflow-y: scroll;
-   -ms-overflow-style: none;
-   scrollbar-width: none;
+   /* -ms-overflow-style: none;
+   scrollbar-width: none; */
 }
 
 #journal__entries__container::-webkit-scrollbar {
-   display: none;
+   /* display: none; */
 }
 
 #journal__entries {

@@ -49,7 +49,7 @@ const ViewEntry = () => {
             </div>
          </div>
          <div id="edit__entry__buttons">
-            <NavLink to={`/entries/${entry.id}/edit`}><button className="entry__button">edit entry</button></NavLink>
+            <NavLink to={`/entries/${entry.id}/edit`}><button className="entry__button" id="edit__entry__button">edit entry</button></NavLink>
             <button id="submit__new__journal" onClick={deleteEntry} className="entry__button">delete entry</button>
          </div>
       </div>

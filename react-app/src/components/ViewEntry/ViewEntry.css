@@ -37,7 +37,7 @@
 }
 
 #view__entry__container {
-   /* height: 30%; */
+   height: 476px;
    margin: 30px;
 }
 
@@ -55,7 +55,7 @@
 }
 
 #entry__description {
-   height: 470px;
+   height: 458px;
    overflow-y: scroll;
 }
 
@@ -71,4 +71,8 @@
    border: 1px solid #707070;
    border-radius: 15px;
    background-color: white;
+}
+
+#edit__entry__button {
+   margin-right: 18px;
 }
