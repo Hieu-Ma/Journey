@@ -5,6 +5,7 @@ import { getUserJournal } from '../../store/journals';
 import { editUserJournal, deleteUserJournal } from '../../store/journals';
 import Modal from '@material-ui/core/Modal';
 import './ViewJournal.css';
+import '../journal.css';
 
 const ViewJournal = () => {
    let history = useHistory();

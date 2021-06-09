@@ -7,9 +7,9 @@ import ReactQuill, { Quill } from 'react-quill';
 import { Editor } from '@tinymce/tinymce-react';
 import 'react-quill/dist/quill.snow.css';
 import Modal from '@material-ui/core/Modal';
-import './CreateEntry.css';
+import './EditEntry.css';
 
-const CreateEntry = () => {
+const EditEntry = () => {
    let history = useHistory();
    const dispatch = useDispatch();
    let { id } = useParams();
@@ -104,4 +104,4 @@ const CreateEntry = () => {
    )
 }
 
-export default CreateEntry;
+export default EditEntry;
