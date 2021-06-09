@@ -36,8 +36,8 @@
    align-self: center;
 }
 
-#entries__container {
-   height: 30%;
+#view__entry__container {
+   height: 476px;
    margin: 30px;
 }
 
@@ -55,17 +55,24 @@
 }
 
 #entry__description {
-   height: 500px;
+   height: 458px;
    overflow-y: scroll;
 }
-/* .quill {
-   height: 500px;
-} */
-/* 
-#entries__container form {
-   height: 500px;
+
+#edit__entry__buttons {
+   display: flex;
+   justify-content: flex-end;
+   margin-right: 30px;
 }
 
-#word__processor {
-   height: 400px;
-} */
+.entry__button {
+   width: 157px;
+   height: 49px;
+   border: 1px solid #707070;
+   border-radius: 15px;
+   background-color: white;
+}
+
+#edit__entry__button {
+   margin-right: 18px;
+}

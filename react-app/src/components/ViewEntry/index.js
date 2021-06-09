@@ -16,17 +16,13 @@ const ViewEntry = () => {
    let { id } = useParams();
    let entryId = Number(id);
    const journal = useSelector(state => state.journals.journal); 
-   const entries = useSelector(state => state.journals.entries);
-   const userId = useSelector(state => state.session.user.id);
    const entry = useSelector(state => state.entries.entry);
+
    useEffect(() => {
       dispatch(getUserEntry(entryId))
    },[dispatch, id]);
 
-   if(!journal || !userId || !entries || !entry) return null;
-   if(journal.user_id !== userId) return (
-      <div>Journal does not belong to current user!</div>
-   );
+   if(!entry) return null;
 
    const deleteEntry = (e) => {
       e.preventDefault();
@@ -45,17 +41,16 @@ const ViewEntry = () => {
                   </svg>
                </button>
             </NavLink>
-            <div id="journal__title">{journal.title}</div>
-         </div>
-         <div id="entries__container">
+            <div id="journal__title"><NavLink to={`/journals/${entry.journal_id}`}>{entry.journal_title}</NavLink></div>         </div>
+         <div id="view__entry__container">
             <div id="entry__title">{entry.title}</div>
             <div id="entry__description">
                <div dangerouslySetInnerHTML={{__html: entry.description}}></div>
             </div>
          </div>
-         <div id="edit__journal__buttons">
-            <NavLink to={`/entries/${entry.id}/edit`}><button>edit</button></NavLink>
-            <button id="submit__new__journal" onClick={deleteEntry}>delete</button>
+         <div id="edit__entry__buttons">
+            <NavLink to={`/entries/${entry.id}/edit`}><button className="entry__button" id="edit__entry__button">edit entry</button></NavLink>
+            <button id="submit__new__journal" onClick={deleteEntry} className="entry__button">delete entry</button>
          </div>
       </div>
    )

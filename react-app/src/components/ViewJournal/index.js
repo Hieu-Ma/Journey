@@ -100,7 +100,7 @@ const ViewJournal = () => {
                   </svg>
                </button>
             </NavLink>
-            <div id="journal__title">{journal.title}</div>
+            <div id="journal__title"><NavLink to={`/journals/${journal.id}`}>{journal.title}</NavLink></div>
          </div>
          <div id="entries__container">
             <div id="journal__entries__container">
@@ -125,8 +125,8 @@ const ViewJournal = () => {
                {deleteJournalModal}
             </Modal>
             <div id="journal__buttons">
-               <button id="edit__journal__button" className="journal__button" onClick={handleOpenEdit}>edit</button>
-               <button className="journal__button" onClick={handleOpenDelete}>delete</button>
+               <button id="edit__journal__button" className="journal__button" onClick={handleOpenEdit}>edit journal</button>
+               <button className="journal__button" onClick={handleOpenDelete}>delete journal</button>
             </div>
          </div>
       </div>
