@@ -97,7 +97,8 @@ const EditEntry = () => {
                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                   }}
                 />
-               <button type="submit" onClick={log}>create</button>
+                <button type="submit" onClick={log}>cancel</button>
+               <button type="submit" onClick={log}>submit</button>
             </form>
          </div>
       </div>
