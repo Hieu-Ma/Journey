@@ -18,7 +18,7 @@
       border-radius: 31px;
       margin-top: 65px;
       margin-left: 80px;
-      position:fixed;
+      position:absolute;
       top:80px;
       right: 8%;
    }
@@ -32,7 +32,7 @@
       border-radius: 31px;
       margin-top: 65px;
       margin-left: 80px;
-      position:fixed;
+      position:absolute;
       top:80px;
       right: 8%;
    }

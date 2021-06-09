@@ -22,7 +22,7 @@ nav a {
 }
 
 #username {
-   position:fixed;
+   position:absolute;
    top:35px;
    right: 8%;
    font-size: 22px;
