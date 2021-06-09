@@ -79,25 +79,29 @@ const CreateEntry = () => {
                   onChange={e => setTitle(e.target.value)}
                >
                </input>
-               <Editor
-                  apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
-                  onInit={(evt, editor) => editorRef.current = editor}
-                  init={{
-                    height: 500,
-                    menubar: false,
-                    plugins: [
-                      'advlist autolink lists link image charmap print preview anchor',
-                      'searchreplace visualblocks code fullscreen',
-                      'insertdatetime media table paste code help wordcount'
-                    ],
-                    toolbar: 'undo redo | formatselect | ' +
-                    'bold italic backcolor | alignleft aligncenter ' +
-                    'alignright alignjustify | bullist numlist outdent indent | ' +
-                    'removeformat | help',
-                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-                  }}
-                />
-               <button type="submit" onClick={log}>create</button>
+               <div id="editor__container">
+                  <Editor
+                     apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
+                     onInit={(evt, editor) => editorRef.current = editor}
+                     init={{
+                       height: 439,
+                       menubar: false,
+                       plugins: [
+                         'advlist autolink lists link image charmap print preview anchor',
+                         'searchreplace visualblocks code fullscreen',
+                         'insertdatetime media table paste code help wordcount'
+                       ],
+                       toolbar: 'undo redo | formatselect | ' +
+                       'bold italic backcolor | alignleft aligncenter ' +
+                       'alignright alignjustify | bullist numlist outdent indent | ' +
+                       'removeformat | help',
+                       content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                     }}
+                  />
+                </div>
+               <div id="create__entry__buttons">
+                  <button type="submit" onClick={log}>create</button>
+               </div>
             </form>
          </div>
       </div>

@@ -70,12 +70,14 @@ const EditEntry = () => {
    return (
       <div id="journal">
          <div id="journal__title__container">
-            <button id="create__entry">
-               <svg xmlns="http://www.w3.org/2000/svg" width="23.37" height="23" viewBox="0 0 23.37 23">
-               <line id="Line_6" data-name="Line 6" y2="21" transform="translate(10.846 1)" fill="none" stroke="#646464" stroke-linecap="round" stroke-width="2"/>
-               <line id="Line_7" data-name="Line 7" x2="21.37" transform="translate(1 11.582)" fill="none" stroke="#646464" stroke-linecap="round" stroke-width="2"/>
-               </svg>
-            </button>
+            <NavLink to={`/journals/${entry.journal_id}/create`} >
+               <button id="create__entry">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23.37" height="23" viewBox="0 0 23.37 23">
+                  <line id="Line_6" data-name="Line 6" y2="21" transform="translate(10.846 1)" fill="none" stroke="#646464" stroke-linecap="round" stroke-width="2"/>
+                  <line id="Line_7" data-name="Line 7" x2="21.37" transform="translate(1 11.582)" fill="none" stroke="#646464" stroke-linecap="round" stroke-width="2"/>
+                  </svg>
+               </button>
+            </NavLink>
             <div id="journal__title"><NavLink to={`/journals/${entry.journal_id}`}>{entry.journal_title}</NavLink></div>
          </div>
          <div id="entries__container">
@@ -86,27 +88,33 @@ const EditEntry = () => {
                   onChange={e => setTitle(e.target.value)}
                   >
                </input>
-               <Editor
-                  apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
-                  onInit={(evt, editor) => editorRef.current = editor}
-                  initialValue={entry.description}
-                  init={{
-                    height: 500,
-                    menubar: false,
-                    plugins: [
-                      'advlist autolink lists link image charmap print preview anchor',
-                      'searchreplace visualblocks code fullscreen',
-                      'insertdatetime media table paste code help wordcount'
-                    ],
-                    toolbar: 'undo redo | formatselect | ' +
-                    'bold italic backcolor | alignleft aligncenter ' +
-                    'alignright alignjustify | bullist numlist outdent indent | ' +
-                    'removeformat | help',
-                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-                  }}
-                />
-                <button type="submit">cancel</button>
-               <button type="submit" onClick={log}>submit</button>
+               <div id="editor__container">
+                  <Editor
+                     apiKey='zz6qgaddhlvxbo2qhyr6egdacg5wpc8frh658nppxd7p6z7r'
+                     onInit={(evt, editor) => editorRef.current = editor}
+                     initialValue={entry.description}
+                     init={{
+                       height: 439,
+                       menubar: false,
+                       plugins: [
+                         'advlist autolink lists link image charmap print preview anchor',
+                         'searchreplace visualblocks code fullscreen',
+                         'insertdatetime media table paste code help wordcount'
+                       ],
+                       toolbar: 'undo redo | formatselect | ' +
+                       'bold italic backcolor | alignleft aligncenter ' +
+                       'alignright alignjustify | bullist numlist outdent indent | ' +
+                       'removeformat | help',
+                       content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                     }}
+                  />
+               </div>
+               <div id="edit__buttons">
+                  <NavLink to={`/entries/${entry.id}`}>
+                     <button type="submit" id="cancel__edit" className="edit__button">cancel</button>
+                  </NavLink>
+                  <button type="submit" onClick={log} className="edit__button">submit</button>
+               </div>
             </form>
          </div>
       </div>
