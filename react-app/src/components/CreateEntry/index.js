@@ -23,7 +23,7 @@ const CreateEntry = () => {
    console.log(description)
    const log = () => {
      if (editorRef.current) {
-       console.log(editorRef.current.getContent());
+      //  console.log(editorRef.current.getContent());
        setDescription(editorRef.current.getContent());
      }
    };
@@ -40,7 +40,7 @@ const CreateEntry = () => {
    const createEntry = (e) => {
       e.preventDefault();
       dispatch(createJournalEntry(journalId, title, description))
-      // history.push(`/journals/${journalId}`)
+      history.push(`/journals/${journalId}`)
    }
 
    const modules = {
@@ -109,8 +109,8 @@ const CreateEntry = () => {
                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                   }}
                 />
-               <button onClick={log}>Log editor content</button>
-               <button type="submit">create</button>
+               {/* <button onClick={log}>Log editor content</button> */}
+               <button type="submit" onClick={log}>create</button>
             </form>
          </div>
       </div>
