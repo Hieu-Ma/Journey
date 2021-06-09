@@ -41,7 +41,8 @@
    "emotion emotion__img"
    ;
    height: 80%;
-   margin: 0 10px;
+   margin: 31px 0px;
+   margin-left: 10px;
    overflow-y: scroll;
    /* -ms-overflow-style: none;
    scrollbar-width: none; */
@@ -54,7 +55,7 @@
 
 #benefits__title {
    grid-area: title;
-   margin: 25px 0px 40px 40px;
+   margin: 0px 0px 40px 40px;
    font-size: 41px;
    color: #707070;
 }
