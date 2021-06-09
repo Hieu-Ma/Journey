@@ -89,7 +89,7 @@
 }
 
 #edit__journal__button {
-   margin-right: 25px;
+   margin-right: 20px;
 }
 
 #edit__journal__container {
@@ -123,10 +123,6 @@
    display: flex;
    justify-content: flex-end;
    height: 23px;
-}
-
-#submit__new__journal {
-   margin-left: 7px;
 }
 
 #delete__journal__container {

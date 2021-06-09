@@ -41,23 +41,25 @@
    margin: 30px;
 }
 
-.quill {
-   margin-top: 15px;
+#editor__container {
+   margin-top: 18px;
 }
 
-.ql-container.ql-snow {
-   height: 450px;
-   /* overflow-y: scroll; */
+#edit__buttons {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   height: 100px;
+   /* margin-right: 30px; */
 }
 
-/* .quill {
-   height: 500px;
-} */
-/* 
-#entries__container form {
-   height: 500px;
+.edit__button {
+   width: 157px;
+   height: 49px;
+   border: 1px solid #707070;
+   border-radius: 15px;
+   background-color: white;
 }
-
-#word__processor {
-   height: 400px;
-} */
+#cancel__edit {
+   margin-right: 20px;
+}
