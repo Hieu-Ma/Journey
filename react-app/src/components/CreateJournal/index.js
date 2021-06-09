@@ -51,7 +51,7 @@ const CreateJournal = () => {
    )
 
    return (
-      <div id="create__journal">
+      <div id="journal">
          <div id="journal__border">
             <button id="create__button" onClick={handleOpen}>create a new journal!</button>
          </div>

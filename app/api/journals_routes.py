@@ -64,7 +64,7 @@ def rename_journal(id):
 @journals_routes.route("/<id>", methods=['DELETE'])
 def delete_journal(id):
    """
-   Renames the user's selected journal
+   Deletes the user's selected journal
    """
    journal = Journal.query.get(id)
    db.session.delete(journal)

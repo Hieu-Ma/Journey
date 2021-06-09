@@ -5,11 +5,11 @@ import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/Navbar";
 import Journals from "./components/Journals";
-import Home from "./components/Home";
-import HomeViewJournal from "./components/HomeViewJournal";
+import CreateEntry from "./components/CreateEntry";
 import CreateJournal from "./components/CreateJournal";
-import HomeCreateEntry from "./components/HomeCreateEntry";
-import HomeViewEntry from "./components/HomeViewEntry";
+import EditEntry from "./components/EditEntry";
+import ViewEntry from "./components/ViewEntry";
+import ViewJournal from "./components/ViewJournal";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/session";
 function App() {
@@ -48,6 +48,7 @@ function App() {
     return (
       <BrowserRouter>
         <NavBar />
+        <Journals />
         <Switch>
           <Route path="/login" exact={true}>
             <LoginForm />
@@ -56,16 +57,19 @@ function App() {
             <SignUpForm />
           </Route>
           <ProtectedRoute path="/" exact={true} >
-            <Home />
+            <CreateJournal />
           </ProtectedRoute>
           <ProtectedRoute path={`/journals/:id`} exact={true} >
-            <HomeViewJournal />
+            <ViewJournal />
           </ProtectedRoute>
           <ProtectedRoute path={`/journals/:id/create`} exact={true} >
-            <HomeCreateEntry />
+            <CreateEntry />
           </ProtectedRoute>
           <ProtectedRoute path={`/entries/:id`} exact={true} >
-            <HomeViewEntry />
+            <ViewEntry />
+          </ProtectedRoute>
+          <ProtectedRoute path={`/entries/:id/edit`} exact={true} >
+            <EditEntry />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

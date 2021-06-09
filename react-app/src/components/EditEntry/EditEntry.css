@@ -37,7 +37,7 @@
 }
 
 #entries__container {
-   height: 30%;
+   height: 85%;
    margin: 30px;
 }
 
@@ -50,14 +50,6 @@
    /* overflow-y: scroll; */
 }
 
-#entry__title {
-   border-bottom: 1px solid #707070;
-}
-
-#entry__description {
-   height: 500px;
-   overflow-y: scroll;
-}
 /* .quill {
    height: 500px;
 } */

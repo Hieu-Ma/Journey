@@ -3,7 +3,7 @@ import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
 import { createJournalEntry } from '../../store/journals';
-import { getUserEntry } from "../../store/entries"
+import { getUserEntry, deleteUserEntry } from "../../store/entries"
 import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Modal from '@material-ui/core/Modal';
@@ -28,6 +28,12 @@ const ViewEntry = () => {
       <div>Journal does not belong to current user!</div>
    );
 
+   const deleteEntry = (e) => {
+      e.preventDefault();
+      dispatch(deleteUserEntry(entryId))
+      history.push(`/journals/${entry?.journal_id}`)
+   }
+
    return (
       <div id="journal">
          <div id="journal__title__container">
@@ -48,9 +54,9 @@ const ViewEntry = () => {
             </div>
          </div>
          <div id="edit__journal__buttons">
-               <button>edit</button>
-               <button id="submit__new__journal" type="submit">delete</button>
-            </div>
+            <NavLink to={`/entries/${entry.id}/edit`}><button>edit</button></NavLink>
+            <button id="submit__new__journal" onClick={deleteEntry}>delete</button>
+         </div>
       </div>
    )
 }
