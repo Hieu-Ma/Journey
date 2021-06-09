@@ -23,6 +23,7 @@ const ViewJournal = () => {
    // This handles the edit journal title modal
    const editJournal = (e) => {
       e.preventDefault();
+      handleCloseEdit();
       dispatch(editUserJournal(journalId, newTitle));
    }
 
