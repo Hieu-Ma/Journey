@@ -37,17 +37,9 @@
 }
 
 #view__entry__container {
-   height: 476px;
+   height: 480px;
    margin: 30px;
-}
-
-.quill {
-   margin-top: 15px;
-}
-
-.ql-container.ql-snow {
-   height: 450px;
-   /* overflow-y: scroll; */
+   margin-bottom: 0px;
 }
 
 #entry__title {
@@ -62,10 +54,13 @@
 #edit__entry__buttons {
    display: flex;
    justify-content: flex-end;
+   align-items: center;
    margin-right: 30px;
+   height: 100px;
 }
 
 .entry__button {
+   margin-bottom: 5px;
    width: 157px;
    height: 49px;
    border: 1px solid #707070;
@@ -75,4 +70,38 @@
 
 #edit__entry__button {
    margin-right: 20px;
+}
+
+/* Modal styling */
+
+#delete__journal__container {
+   position: static;
+   margin: 210px auto 0px auto;
+   width: 600px;
+   height: 150px;
+   background-color: white;
+   border-radius: 44px;
+   border: 1px solid #707070;
+}
+
+#delete__journal__container h1 {
+   margin: 0px;
+   margin-top: 25px;
+   height: 50px;
+   text-align: center;
+   font-size: 25px;
+}
+
+#delete__journal__buttons {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+#confirm__delete {
+   margin-right:77px;
+}
+
+#cancel__delete {
+   margin-right: 5px;
 }

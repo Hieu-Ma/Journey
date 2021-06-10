@@ -18,6 +18,19 @@ const ViewEntry = () => {
    const journal = useSelector(state => state.journals.journal); 
    const entry = useSelector(state => state.entries.entry);
 
+   // This useState handles opening the modal
+   const [open, setOpen] = useState(false);
+
+   // Opens Modal
+   const handleOpen = () => {
+      setOpen(true);
+   }
+
+   // Closes Modal
+   const handleClose = () => {
+      setOpen(false);
+   }
+
    useEffect(() => {
       dispatch(getUserEntry(entryId))
    },[dispatch, id]);
@@ -29,6 +42,17 @@ const ViewEntry = () => {
       dispatch(deleteUserEntry(entryId))
       history.push(`/journals/${entry?.journal_id}`)
    }
+
+   const deleteEntryModal = (
+      <div id="delete__journal__container">
+         <h1>Do you want to delete {entry.title}?</h1>
+         <div id="delete__journal__buttons">
+            <button id="cancel__delete" onClick={handleClose}>No</button>
+            <button id="confirm__delete" onClick={deleteEntry}>Yes</button>
+         </div>
+      </div>
+   )
+
 
    return (
       <div id="journal">
@@ -48,9 +72,15 @@ const ViewEntry = () => {
                   <div dangerouslySetInnerHTML={{__html: entry.description}}></div>
                </div>
             </div>
+            <Modal
+               open={open}
+               onClose={handleClose}
+            >
+               {deleteEntryModal}
+            </Modal>
             <div id="edit__entry__buttons">
                <NavLink to={`/entries/${entry.id}/edit`}><button className="entry__button" id="edit__entry__button">edit entry</button></NavLink>
-               <button id="submit__new__journal" onClick={deleteEntry} className="entry__button">delete entry</button>
+               <button id="submit__new__journal" onClick={handleOpen} className="entry__button">delete entry</button>
             </div>
       </div>
    )
