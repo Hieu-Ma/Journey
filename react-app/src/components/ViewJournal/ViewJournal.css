@@ -31,9 +31,9 @@
    align-self: center;
 }
 
-#entries__container {
+#view__entries__container {
    height: 85%;
-   margin: 30px;
+   margin: 30px 40px;
 }
 
 #journal__entries__container {
@@ -41,12 +41,6 @@
    margin: 10px 0px;
    margin-bottom: 0px;
    overflow-y: scroll;
-   /* -ms-overflow-style: none;
-   scrollbar-width: none; */
-}
-
-#journal__entries__container::-webkit-scrollbar {
-   /* display: none; */
 }
 
 #journal__entries {
@@ -70,6 +64,7 @@
    height: 48px;
    border: 1px solid #707070;
    border-radius: 10px;
+   transition: background-color .2s;
 }
 
 #journal__buttons {
@@ -160,6 +155,10 @@
 
 @media screen and (max-width: 1800px) {
 
+   #entries__container {
+      margin: 40px;
+   }
+
    #journal__entries {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -185,6 +184,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+   #view__entries__container {
+      height: 85%;
+      margin: 30px 20px;
+   }
 
    #journal__entries {
       display: grid;
@@ -199,6 +202,35 @@
       justify-content: center;
       align-items: center;
       width: 180px;
+      height: 48px;
+      border: 1px solid #707070;
+      border-radius: 10px;
+   }
+
+   #journal__title {
+      text-align: center;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   #view__entries__container {
+      height: 85%;
+      margin: 30px 20px;
+   }
+
+   #journal__entries {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      justify-items: center;
+      row-gap: 20px;
+   }
+   
+   .entry {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
       height: 48px;
       border: 1px solid #707070;
       border-radius: 10px;

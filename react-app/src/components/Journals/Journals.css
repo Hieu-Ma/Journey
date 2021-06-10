@@ -24,13 +24,7 @@
    height: 480px;
    margin-top: 31px;
    overflow-y: scroll;
-   /* -ms-overflow-style: none;
-   scrollbar-width: none; */
 }
-/* 
-#journals__container::-webkit-scrollbar {
-   display: none;
-} */
 
 #journals__container a {
    text-decoration: none;
@@ -46,7 +40,9 @@
    margin: 0px 8%;
    margin-bottom: 20px;
    border-radius: 10px;
+   transition: background-color .2s;
 }
+
 
 @media screen and (max-width: 1800px) {
    #journals {

@@ -20,6 +20,21 @@ const ViewJournal = () => {
    const [openDelete, setOpenDelete] = useState(false);
    const [openEdit, setOpenEdit] = useState(false);
 
+   // handles the background colors of the entries
+
+   function randomColor(e) {
+      const x = Math.floor(Math.random() * 256);
+      const y = Math.floor(Math.random() * 256);
+      const z = Math.floor(Math.random() * 256);
+      const op = 0.3;
+      const color = "rgb(" + x + "," + y + "," + z + "," + op + ")";
+      e.target.style.backgroundColor = color;
+    }
+  
+    function defaultColor(e) {
+      e.target.style.backgroundColor = "white";
+    }
+
    // This handles the edit journal title modal
    const editJournal = (e) => {
       e.preventDefault();
@@ -102,12 +117,12 @@ const ViewJournal = () => {
             </NavLink>
             <div id="journal__title"><NavLink to={`/journals/${journal.id}`}>{journal.title}</NavLink></div>
          </div>
-         <div id="entries__container">
+         <div id="view__entries__container">
             <div id="journal__entries__container">
                <div id="journal__entries">
                   {entries.map(entry => (
                      <NavLink className="entry__link" to={`/entries/${entry.id}`}>
-                        <div key={`${entry.id}+${entry.title}` } className="entry">{entry.title}</div>
+                        <div key={`${entry.id}+${entry.title}` } className="entry" onMouseOver={randomColor} onMouseOut={defaultColor}>{entry.title}</div>
                      </NavLink>
                   ))}
                </div>
