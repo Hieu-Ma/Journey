@@ -47,8 +47,8 @@ const ViewEntry = () => {
       <div id="delete__journal__container">
          <h1>Do you want to delete {entry.title}?</h1>
          <div id="delete__journal__buttons">
-            <button id="cancel__delete" onClick={handleClose}>No</button>
-            <button id="confirm__delete" onClick={deleteEntry}>Yes</button>
+            <button id="cancel__delete__entry" onClick={handleClose}>No</button>
+            <button id="confirm__delete__entry" onClick={deleteEntry}>Yes</button>
          </div>
       </div>
    )
