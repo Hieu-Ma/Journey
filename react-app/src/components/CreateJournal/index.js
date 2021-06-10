@@ -2,7 +2,6 @@ import React, { useState }from 'react';
 import { useDispatch } from 'react-redux';
 import { createUserJournal } from '../../store/journals'
 import Modal from '@material-ui/core/Modal';
-import Fade from '@material-ui/core/Fade';
 import './CreateJournal.css';
 
 const CreateJournal = () => {
@@ -61,9 +60,7 @@ const CreateJournal = () => {
             open={open}
             onClose={handleClose}
          >
-            <Fade in={open}>
-               {modalContent}
-            </Fade>
+            {modalContent}
          </Modal>
          <div id="journal__benefits">
 
