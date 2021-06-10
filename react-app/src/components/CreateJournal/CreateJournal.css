@@ -192,6 +192,7 @@
    height: 170px;
    background-color: white;
    border: 4px solid #707070;
+   outline: none;
 }
 
 #create__journal__form h1 {
