@@ -28,6 +28,10 @@
    border-radius: 25px;
 }
 
+#create__entry a{
+ padding: 12px;
+}
+
 #journal__title {
    justify-self: center;
    align-self: center;
