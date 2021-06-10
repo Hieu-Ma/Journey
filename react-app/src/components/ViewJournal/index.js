@@ -31,9 +31,9 @@ const ViewJournal = () => {
       e.target.style.backgroundColor = color;
     }
   
-    function defaultColor(e) {
-      e.target.style.backgroundColor = "white";
-    }
+   function defaultColor(e) {
+     e.target.style.backgroundColor = "white";
+   }
 
    // This handles the edit journal title modal
    const editJournal = (e) => {
@@ -59,6 +59,7 @@ const ViewJournal = () => {
                name="newTitle"
                onChange={e => setNewTitle(e.target.value)}
                value={newTitle}
+               id="insert__title"
                required
             ></input>
             <div id="edit__journal__buttons">

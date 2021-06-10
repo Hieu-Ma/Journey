@@ -51,6 +51,8 @@
    overflow-y: scroll;
 }
 
+/* edit and submit buttons */
+
 #edit__entry__buttons {
    display: flex;
    justify-content: flex-end;
@@ -67,9 +69,11 @@
    border-radius: 15px;
    background-color: white;
 }
-
 #edit__entry__button {
    margin-right: 20px;
+}
+#delete__entry__button {
+   /* margin-right: 20px; */
 }
 
 /* Modal styling */

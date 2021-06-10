@@ -80,7 +80,7 @@ const ViewEntry = () => {
             </Modal>
             <div id="edit__entry__buttons">
                <NavLink to={`/entries/${entry.id}/edit`}><button className="entry__button" id="edit__entry__button">edit entry</button></NavLink>
-               <button id="submit__new__journal" onClick={handleOpen} className="entry__button">delete entry</button>
+               <button id="submit__new__journal" onClick={handleOpen} id="delete__entry__button" className="entry__button">delete entry</button>
             </div>
       </div>
    )

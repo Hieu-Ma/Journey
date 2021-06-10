@@ -66,22 +66,24 @@
    border-radius: 10px;
    transition: background-color .2s;
 }
-
+/* edit and delete buttons */
 #journal__buttons {
    display: flex;
    justify-content: flex-end;
    align-items: center;
+   /* margin-right: 30px; */
    width: 100%;
+   margin-left:10px;
    height: 100px;
 }
 
 .journal__button {
+   margin-bottom: 5px;
    width: 157px;
    height: 49px;
    border: 1px solid #707070;
    border-radius: 15px;
    background-color: white;
-   margin-bottom: 5px;
 }
 
 #edit__journal__button {
@@ -93,9 +95,9 @@
    margin: 210px auto 0px auto;
    width: 600px;
    height: 210px;
-   background-color: white;
-   border-radius: 44px;
-   border: 1px solid #707070;
+   background-color: rgb(255, 255, 255);
+   /* border-radius: 44px; */
+   border: 5px solid #707070;
    display: flex;
    justify-content: center;
 }
@@ -104,8 +106,12 @@
    margin: 0px;
    margin-top: 25px;
    height: 50px;
+   font-size: 35px;
    text-align: center;
+   color:#4E4E4E;
 }
+
+/* new journal title input styling */
 
 #edit__journal input{
    margin-top: 15px;
@@ -113,12 +119,41 @@
    height: 23px;
 }
 
+#insert__title {
+   border: 2px solid #777777;
+   transition: border .1s;
+   outline: none;
+}
+
+#insert__title:hover {
+   border: 2px solid rgb(48, 48, 48);
+}
+
+/* new journal title modal button styling  */
+
 #edit__journal__buttons {
    width: 100%;
-   margin-top: 10px;
+   margin-top: 18px;
    display: flex;
    justify-content: flex-end;
    height: 23px;
+}
+
+#edit__journal__buttons button {
+   background-color: white;
+   border: none;
+   cursor: pointer;
+   font-size: 14px;
+   border-bottom: 2px solid white;
+   transition: border-bottom .2s;
+}
+
+#edit__journal__buttons button:hover {
+   border-bottom: 2px solid #4E4E4E;;
+}
+
+#submit__new__journal {
+   margin-left: 15px;
 }
 
 #delete__journal__container {
