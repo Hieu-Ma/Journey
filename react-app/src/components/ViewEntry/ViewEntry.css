@@ -68,9 +68,16 @@
    border: 1px solid #707070;
    border-radius: 15px;
    background-color: white;
+   cursor: pointer;
 }
 #edit__entry__button {
    margin-right: 20px;
+}
+
+#edit__entry__button a {
+   text-decoration: none;
+   color: black;
+   padding: 17px 42px;
 }
 #delete__entry__button {
    /* margin-right: 20px; */

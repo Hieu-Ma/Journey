@@ -17,6 +17,11 @@
    color: #4E4E4E;
 }
 
+#journal__title__container a{
+   align-self: center;
+   margin-top:3px;
+}
+
 #create__entry {
    display: flex;
    justify-content: center;
@@ -29,6 +34,7 @@
    margin-left: 18px;
    border: 1px solid #707070;
    border-radius: 25px;
+   cursor: pointer;
 }
 
 #journal__title {

@@ -8,8 +8,10 @@
    font-size: 28px;
    color: #4E4E4E;
 }
+
 #journal__title__container a{
    align-self: center;
+   margin-top:3px;
 }
 
 #create__entry {
@@ -71,7 +73,6 @@
    display: flex;
    justify-content: flex-end;
    align-items: center;
-   /* margin-right: 30px; */
    width: 100%;
    margin-left:10px;
    height: 100px;
@@ -84,6 +85,7 @@
    border: 1px solid #707070;
    border-radius: 15px;
    background-color: white;
+   cursor: pointer;
 }
 
 #edit__journal__button {
