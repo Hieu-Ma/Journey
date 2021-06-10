@@ -37,17 +37,9 @@
 }
 
 #view__entry__container {
-   height: 476px;
+   height: 480px;
    margin: 30px;
-}
-
-.quill {
-   margin-top: 15px;
-}
-
-.ql-container.ql-snow {
-   height: 450px;
-   /* overflow-y: scroll; */
+   margin-bottom: 0px;
 }
 
 #entry__title {
@@ -62,15 +54,22 @@
 #edit__entry__buttons {
    display: flex;
    justify-content: flex-end;
+   align-items: center;
    margin-right: 30px;
+   height: 100px;
 }
 
+/* #edit__entry__buttons button {
+} */
+
 .entry__button {
+   margin-bottom: 5px;
    width: 157px;
    height: 49px;
    border: 1px solid #707070;
    border-radius: 15px;
    background-color: white;
+   /* margin-bottom: 30px; */
 }
 
 #edit__entry__button {

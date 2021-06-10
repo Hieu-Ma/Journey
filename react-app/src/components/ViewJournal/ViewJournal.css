@@ -86,6 +86,7 @@
    border: 1px solid #707070;
    border-radius: 15px;
    background-color: white;
+   margin-bottom: 5px;
 }
 
 #edit__journal__button {
@@ -161,7 +162,7 @@
 
    #journal__entries {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
       justify-items: center;
       row-gap: 20px;
@@ -181,4 +182,29 @@
       text-align: center;
    }
 
+}
+
+@media screen and (max-width: 1000px) {
+
+   #journal__entries {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      justify-items: center;
+      row-gap: 20px;
+   }
+   
+   .entry {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 48px;
+      border: 1px solid #707070;
+      border-radius: 10px;
+   }
+
+   #journal__title {
+      text-align: center;
+   }
 }
