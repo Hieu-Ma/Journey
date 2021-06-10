@@ -41,11 +41,12 @@ const CreateJournal = () => {
                onChange={e => setTitle(e.target.value)}
                value={title}
                required
+               id="create__new__journal"
             ></input>
          </div>
          <div id="create__journal__buttons">
-            <button id="cancel__journal__button" onClick={handleClose}>cancel</button>
-            <button id="create__journal__button" type="submit">create</button>
+            <button id="cancel__journal" className="create__journal__button" onClick={handleClose}>cancel</button>
+            <button id="create__journal" className="create__journal__button" type="submit">create</button>
          </div>
       </form>
    )

@@ -183,27 +183,30 @@
    height: 230px;
 }
 
+/* Create journal modal */
+
 #create__journal__form {
    position: static;
    margin: 210px auto 0px auto;
    width: 600px;
    height: 170px;
    background-color: white;
-   border-radius: 44px;
-   border: 1px solid #707070;
+   border: 4px solid #707070;
 }
 
 #create__journal__form h1 {
    margin: 0px;
    margin-top: 25px;
+   margin-bottom: 3px;
    height: 50px;
    text-align: center;
    font-size: 25px;
+   color: #4E4E4E;
 }
 
 #create__journal__form input {
    width: 480px;
-   height: 23px;
+   height: 22px;
 }
 
 #create__input__container {
@@ -212,18 +215,43 @@
    justify-content: center;
 }
 
+#create__new__journal {
+   border: 2px solid #777777;
+   transition: border .1s;
+   outline: none;
+}
+
+#create__new__journal:hover {
+   border: 2px solid rgb(48, 48, 48);
+}
+
+/* Create journal modal buttons*/
+
 #create__journal__buttons {
    width: 100%;
    display: flex;
    justify-content: flex-end;
-   margin-top: 10px;
+   margin-top: 15px;
 }
 
-#create__journal__button {
+.create__journal__button {
+   background-color: white;
+   border: none;
+   cursor: pointer;
+   font-size: 14px;
+   border-bottom: 2px solid white;
+   transition: border-bottom .2s;
+}
+
+.create__journal__button:hover {
+   border-bottom: 2px solid #4E4E4E;;
+}
+
+#create__journal {
    margin-right: 55px;
 }
 
-#cancel__journal__button {
+#cancel__journal {
    margin-right: 6px;
 }
 

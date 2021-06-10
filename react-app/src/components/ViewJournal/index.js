@@ -53,7 +53,7 @@ const ViewJournal = () => {
    const editJournalModal = (
       <div id="edit__journal__container">
          <form id="edit__journal" onSubmit={editJournal}>
-            <h1>New Journal Title</h1>
+            <h1>Edit Journal Title</h1>
             <input             
                type="text"
                name="newTitle"

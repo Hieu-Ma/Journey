@@ -9,6 +9,10 @@
    left: 8%;
 }
 
+#journals a{
+   text-decoration: none;
+}
+
 #journals__title {
    display: flex;
    justify-content: center;

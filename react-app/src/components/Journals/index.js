@@ -31,7 +31,9 @@ const Journals = () => {
 
   return (
     <div id="journals">
-      <div id="journals__title">Journals</div>
+      <NavLink to="/">
+        <div id="journals__title">Journals</div>
+      </NavLink>
       <div id="journals__container">
         {journals.map(journal => (
           <NavLink key={journal.id} to={`/journals/${journal.id}`}>
