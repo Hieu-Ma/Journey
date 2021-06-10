@@ -163,7 +163,7 @@
    position: static;
    margin: 210px auto 0px auto;
    width: 600px;
-   height: 140px;
+   height: 130px;
    background-color: white;
    border: 5px solid #707070;
    border-radius: 0px;
@@ -200,7 +200,7 @@
 }
 
 #confirm__delete {
-   margin-right:130px;
+   margin-right:77px;
 }
 
 #cancel__delete {

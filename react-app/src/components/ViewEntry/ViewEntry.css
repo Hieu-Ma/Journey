@@ -102,10 +102,10 @@
    justify-content: flex-end;
 }
 
-#confirm__delete {
-   margin-right:77px;
+#confirm__delete__entry {
+   margin-right:130px;
 }
 
-#cancel__delete {
+#cancel__delete__entry {
    margin-right: 5px;
 }
