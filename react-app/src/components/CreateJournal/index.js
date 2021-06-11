@@ -54,15 +54,18 @@ const CreateJournal = () => {
 
    return (
       <div id="journal">
+         
          <div id="journal__border">
             <button id="create__button" onClick={handleOpen}>create a new journal!</button>
          </div>
+
          <Modal
             open={open}
             onClose={handleClose}
          >
             {modalContent}
          </Modal>
+
          <div id="journal__benefits">
 
             <div id="benefits__title">Why Journal?</div>

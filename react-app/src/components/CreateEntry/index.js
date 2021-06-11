@@ -3,10 +3,8 @@ import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserJournal } from '../../store/journals';
 import { createJournalEntry } from '../../store/journals';
-import ReactQuill, { Quill } from 'react-quill';
 import { Editor } from '@tinymce/tinymce-react';
 import 'react-quill/dist/quill.snow.css';
-import Modal from '@material-ui/core/Modal';
 import './CreateEntry.css';
 
 const CreateEntry = () => {

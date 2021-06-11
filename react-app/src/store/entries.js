@@ -3,6 +3,7 @@ const GET_ENTRY = 'entries/GET_ENTRY';
 const EDIT_ENTRY = 'entries/EDIT_ENTRY';
 const DELETE_ENTRY ='entries/DELETE_ENTRY';
 
+//action creators
 const getEntry = (entry) => ({
    type: GET_ENTRY,
    entry
@@ -18,6 +19,7 @@ const deleteEntry = (entry) => ({
    entry
 })
 
+//thunk middleware
 export const getUserEntry = (id) => async (dispatch) => {
    const response = await fetch(`/api/entries/${id}`);
    const data = await response.json();
@@ -56,6 +58,7 @@ export const deleteUserEntry = (id) => async (dispatch) => {
    dispatch(deleteEntry(data));
 }
 
+// reducer
 export default function reducer(state={}, action) {
    let newState = {...state}
    switch (action.type) {

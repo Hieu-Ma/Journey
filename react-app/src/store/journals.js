@@ -6,6 +6,7 @@ const DELETE_JOURNAL = 'journals/DELETE_JOURNAL';
 const GET_JOURNAL = 'journals/GET_JOURNAL';
 const CREATE_ENTRY = 'journals/CREATE_ENTRY'
 
+//action creators
 const getJournals = (journals) => ({
    type: GET_JOURNALS,
    journals
@@ -36,6 +37,7 @@ const createEntry = (entry) => ({
    entry
 })
 
+//thunk middleware
 export const userJournals = () => async (dispatch) => {
    const response = await fetch('/api/journals');
    const data = await response.json();
@@ -117,6 +119,7 @@ export const createJournalEntry = (id, title, description) => async (dispatch) =
    dispatch(createEntry(data));
 }
 
+//reducer
 export default function reducer(state={}, action) {
    let newState = {...state}
    switch (action.type) {

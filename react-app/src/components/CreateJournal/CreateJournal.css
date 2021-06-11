@@ -24,8 +24,6 @@
 }
 
 #create__button:hover {
-   /* background-color: rgb(230, 255, 250); */
-   /* border-color: rgb(164, 196, 189); */
    background-color: #e9e9e967;
 }
 
@@ -44,14 +42,7 @@
    margin: 31px 0px;
    margin-left: 10px;
    overflow-y: scroll;
-   /* -ms-overflow-style: none;
-   scrollbar-width: none; */
-   /* border: 1px solid black; */
 }
-
-/* #journal__benefits::-webkit-scrollbar {
-   display: none;
-} */
 
 #benefits__title {
    grid-area: title;

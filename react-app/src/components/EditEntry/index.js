@@ -1,13 +1,9 @@
 import React, { useState, useEffect, useRef }from 'react';
 import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserJournal } from '../../store/journals';
-// import { createJournalEntry } from '../../store/journals';
 import { editUserEntry, getUserEntry } from '../../store/entries';
-import ReactQuill, { Quill } from 'react-quill';
 import { Editor } from '@tinymce/tinymce-react';
 import 'react-quill/dist/quill.snow.css';
-import Modal from '@material-ui/core/Modal';
 import './EditEntry.css';
 
 const EditEntry = () => {
@@ -18,7 +14,6 @@ const EditEntry = () => {
    let { id } = useParams();
    let entryId = Number(id);
    
-   // const journal = useSelector(state => state.journals.journal); 
    const entry = useSelector(state => state.entries.entry);
    
    const [description, setDescription] = useState('');

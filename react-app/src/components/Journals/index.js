@@ -7,7 +7,6 @@ import './Journals.css';
 const Journals = () => {
 
   const dispatch = useDispatch();
-  const user = useSelector(state => state.session.user);
   const journals = useSelector(state => state?.journals?.journals);
 
   function randomColor(e) {
