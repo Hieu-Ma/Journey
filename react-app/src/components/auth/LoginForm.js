@@ -42,8 +42,8 @@ const LoginForm = () => {
   }
 
   return (
-    <div id="splash__page">
-      <h1 id="splash__page__title">Journey</h1>
+    <div id="login__page">
+      <h1 id="login__page__title">Journey</h1>
       <div id="title__bar"></div>
       <form onSubmit={onLogin} id="login__form">
         <div id="error__container">

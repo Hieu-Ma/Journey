@@ -7,7 +7,7 @@
    margin-left: 45px;
 }
 
-#splash__page {
+#login__page {
    display: flex;
    justify-content: center;
    background-image: url("../../images/water_color.jpg");
@@ -18,12 +18,11 @@
    color: #666666;
 }
 
-#splash__page__title {
+#login__page__title {
    position: fixed;
    top: 135px;
    font-size: 50px;
    color: #4E4E4E;
-   /* border-bottom: 3px solid grey; */
 }
 
 #login__form {
