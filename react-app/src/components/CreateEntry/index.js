@@ -78,6 +78,8 @@ const CreateEntry = () => {
                   placeholder="Title"
                   value={title}
                   onChange={e => setTitle(e.target.value)}
+                  maxlength="20"
+                  required
                >
                </input>
                <div id="editor__container">

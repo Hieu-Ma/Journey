@@ -35,7 +35,7 @@ def get_journal(id):
    Render's the user's selected journal
    """
    journal = Journal.query.get(id)
-   entries = Entry.query.filter_by(journal_id=id)
+   entries = Entry.query.filter_by(journal_id=id).order_by(Entry.id)
 
    return {
       "journal": journal.to_dict(),

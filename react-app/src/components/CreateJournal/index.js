@@ -40,8 +40,9 @@ const CreateJournal = () => {
                name="title"
                onChange={e => setTitle(e.target.value)}
                value={title}
-               required
                id="create__new__journal"
+               maxlength="20"
+               required
             ></input>
          </div>
          <div id="create__journal__buttons">
