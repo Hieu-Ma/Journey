@@ -51,7 +51,12 @@ const Splash = () => {
                I went down this career path because I love how you can continously learn and grow.
                As such, some of my favorite hobbies include reading and drawing!
             </div>
-            <div id="links">Links:</div>
+            <div id="links__title">Links:</div>
+            <div id="links">
+               <a>GitHub</a>
+               <a>Project</a>
+               <a>LinkedIn</a>
+            </div>
          </div>
       </div>
    )
