@@ -33,7 +33,7 @@ const ViewEntry = () => {
 
    useEffect(() => {
       dispatch(getUserEntry(entryId))
-   },[dispatch, id]);
+   },[dispatch, id, journal]);
 
    if(!entry) return null;
 
