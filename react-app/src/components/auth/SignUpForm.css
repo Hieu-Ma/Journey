@@ -13,10 +13,11 @@
    position:fixed;
    top: 265px;
    width: 492px;
-   height: 400px;
+   height: auto;
    background-color: white;
    border: 3px solid #999999;
    border-radius: 25px;
+   padding-bottom: 28px;
 }
 
 .signup__label {
