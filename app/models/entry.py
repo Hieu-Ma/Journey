@@ -5,7 +5,7 @@ class Entry(db.Model):
 
    id = db.Column(db.Integer, primary_key = True)
    journal_id = db.Column(db.Integer, db.ForeignKey('journals.id'), nullable = False)
-   title = db.Column(db.String(25), nullable = False)
+   title = db.Column(db.String(20), nullable = False)
    description = db.Column(db.String(1000), nullable = False)
    journal = db.relationship('Journal', back_populates='entries')
   

@@ -60,6 +60,7 @@ const ViewJournal = () => {
                onChange={e => setNewTitle(e.target.value)}
                value={newTitle}
                id="insert__title"
+               maxlength="20"
                required
             ></input>
             <div id="edit__journal__buttons">
