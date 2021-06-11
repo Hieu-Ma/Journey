@@ -1,4 +1,4 @@
-#splash__page {
+#signup__page {
    display: flex;
    justify-content: center;
    background-image: url("../../images/water_color.jpg");
@@ -7,6 +7,13 @@
    background-repeat: no-repeat;
    background-position-y: 66%;
    color: #666666;
+}
+
+#signup__page__title {
+   position: fixed;
+   top: 135px;
+   font-size: 50px;
+   color: #4E4E4E;
 }
 
 #signup__form {

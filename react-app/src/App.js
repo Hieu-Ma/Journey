@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import Splash from "./components/Splash";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/Navbar";
@@ -39,7 +40,7 @@ function App() {
             <SignUpForm />
           </Route>
           <Route>
-            <LoginForm />
+            <Splash />
           </Route>
         </Switch>
       </BrowserRouter>

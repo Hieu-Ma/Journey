@@ -55,8 +55,8 @@ const SignUpForm = () => {
   }
 
   return (
-    <div id="splash__page">
-      <h1 id="splash__page__title">Journey</h1>
+    <div id="signup__page">
+      <h1 id="signup__page__title">Journey</h1>
       <div id="title__bar"></div>
       <form onSubmit={onSignUp} id="signup__form">
         <div id="error__container">
