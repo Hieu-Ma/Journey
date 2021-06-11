@@ -8,6 +8,7 @@ import polygon_3 from "../../images/Polygon_3.png";
 import polygon_4 from "../../images/Polygon_4.png";
 import polygon_5 from "../../images/Polygon_5.png";
 import polygon_6 from "../../images/Polygon_6.png";
+import me from "../../images/hieu.jpg"
 import "./Splash.css";
 
 const Splash = () => {
@@ -33,11 +34,24 @@ const Splash = () => {
             <div id="grey__border"></div>
          </div>
          <div id="technologies">
-            <div id="html">Html5</div>
-            <div id="css">Css</div>
-            <div id="js">Js</div>
-            <div id="react">React</div>
-            <div id="python">Python</div>
+            <div id="technologies__title">Technologies:</div>
+            <div id="html" className="technology">HTML 5</div>
+            <div id="css" className="technology">CSS</div>
+            <div id="js" className="technology">Js</div>
+            <div id="react" className="technology">React</div>
+            <div id="python" className="technology">Python</div>
+         </div>
+         <div id="me__container">
+            <div id="me">
+               <div id="about">About Me:</div>
+               <img id="profile__pic" src={me}></img>
+            </div>
+            <div id="me__description">
+               Hey! Im Hieu! Currently I am an aspiring software engineer.
+               I went down this career path because I love how you can continously learn and grow.
+               As such, some of my favorite hobbies include reading and drawing!
+            </div>
+            <div id="links">Links:</div>
          </div>
       </div>
    )
