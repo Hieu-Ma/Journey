@@ -156,10 +156,11 @@
 
 #me__container {
    display: flex;
+   margin-top:60px
 }
 
 #me {
-   margin: 35px 75px;
+   margin: 0px 75px;
    height: 100%;
 }
 
@@ -170,18 +171,30 @@
 }
 
 #me__description {
-   margin-top: 40px;
    font-size: 18px;
    width:33%;
+   margin-top: 7px;
 }
 
 #links__title {
    font-size: 35px;
-   margin: 35px 75px;
+   margin: 0px 75px;
    margin-bottom: 15px;
    color: #4E4E4E;
 }
 
 #links {
-   margin-top: 40px;
+   margin-top: 7px;
+}
+
+#links a {
+   margin-right: 20px;
+   text-decoration: none;
+   color: #4E4E4E;
+   border-bottom: 3px solid rgb(212, 212, 212);
+   transition: border-bottom .3s;
+}
+
+#links a:hover{
+   border-bottom: 3px solid #4E4E4E;
 }

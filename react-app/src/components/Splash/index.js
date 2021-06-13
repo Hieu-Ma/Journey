@@ -53,9 +53,9 @@ const Splash = () => {
             </div>
             <div id="links__title">Links:</div>
             <div id="links">
-               <a>GitHub</a>
-               <a>Project</a>
-               <a>LinkedIn</a>
+               <a href="https://github.com/Hieu-Ma" target="_blank">GitHub</a>
+               <a href="https://github.com/Hieu-Ma/Journey" target="_blank">Project</a>
+               <a href="https://www.linkedin.com/in/hieu-ma/" target="_blank">LinkedIn</a>
             </div>
          </div>
       </div>
