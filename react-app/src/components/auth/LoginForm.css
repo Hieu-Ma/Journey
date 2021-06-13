@@ -8,8 +8,6 @@
 }
 
 #login__page {
-   display: flex;
-   justify-content: center;
    background-image: url("../../images/water_color.jpg");
    height: 100vh;
    background-size: cover;
@@ -18,16 +16,24 @@
    color: #666666;
 }
 
+#login__page__content {
+   height: calc(100% - 16%);
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 8%;
+}
+
 #login__page__title {
-   position: fixed;
-   top: 135px;
    font-size: 50px;
+   margin: 0px;
+   margin-bottom: 30px;
    color: #4E4E4E;
 }
 
 #login__form {
-   position:fixed;
-   top: 265px;
    width: 492px;
    height: auto;
    background-color: white;

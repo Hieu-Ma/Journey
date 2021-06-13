@@ -9,16 +9,24 @@
    color: #666666;
 }
 
+#signup__page__content {
+   height: calc(100% - 16%);
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 8%;
+}
+
 #signup__page__title {
-   position: fixed;
-   top: 135px;
    font-size: 50px;
+   margin: 0px;
+   margin-bottom: 30px;
    color: #4E4E4E;
 }
 
 #signup__form {
-   position:fixed;
-   top: 265px;
    width: 492px;
    height: auto;
    background-color: white;

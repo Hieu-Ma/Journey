@@ -29,9 +29,6 @@ const SignUpForm = () => {
     const demoEmail = "demo@gmail.com";
     const demoPassword = "password"
     const data = await dispatch(login(demoEmail, demoPassword));
-    // if (data.errors) {
-    //   setErrors(data.errors);
-    // }
   };
 
   const updateUsername = (e) => {
@@ -56,61 +53,63 @@ const SignUpForm = () => {
 
   return (
     <div id="signup__page">
-      <h1 id="signup__page__title">Journey</h1>
-      <div id="title__bar"></div>
-      <form onSubmit={onSignUp} id="signup__form">
-        <div id="error__container">
-          {errors.map((error) => (
-            <div className="error">{error}</div>
-          ))}
-        </div>
-        <div className="input">
-          <label className="signup__label">User Name</label>
-          <input
-            type="text"
-            name="username"
-            onChange={updateUsername}
-            value={username}
-            className="signup__input"
-          ></input>
-        </div>
-        <div className="input">
-          <label className="signup__label">Email</label>
-          <input
-            type="text"
-            name="email"
-            onChange={updateEmail}
-            value={email}
-            className="signup__input"
-          ></input>
-        </div>
-        <div className="input">
-          <label className="signup__label">Password</label>
-          <input
-            type="password"
-            name="password"
-            onChange={updatePassword}
-            value={password}
-            className="signup__input"
-          ></input>
-        </div>
-        <div className="input">
-          <label className="signup__label">Repeat Password</label>
-          <input
-            type="password"
-            name="repeat_password"
-            onChange={updateRepeatPassword}
-            value={repeatPassword}
-            // required={true}
-            className="signup__input"
-          ></input>
-        </div>
-        <div id="signup__buttons">
-          <NavLink to="/login"><h3 id="login__link">Have an account? Log in!</h3></NavLink>
-          <button onClick={demoLogin}>Demo Login</button>
-          <button type="submit" id="signup__button">Sign Up</button>
-        </div>
-      </form>
+      <div id="signup__page__content">
+        <h1 id="signup__page__title">Journey</h1>
+        <div id="title__bar"></div>
+        <form onSubmit={onSignUp} id="signup__form">
+          <div id="error__container">
+            {errors.map((error) => (
+              <div className="error">{error}</div>
+            ))}
+          </div>
+          <div className="input">
+            <label className="signup__label">User Name</label>
+            <input
+              type="text"
+              name="username"
+              onChange={updateUsername}
+              value={username}
+              className="signup__input"
+            ></input>
+          </div>
+          <div className="input">
+            <label className="signup__label">Email</label>
+            <input
+              type="text"
+              name="email"
+              onChange={updateEmail}
+              value={email}
+              className="signup__input"
+            ></input>
+          </div>
+          <div className="input">
+            <label className="signup__label">Password</label>
+            <input
+              type="password"
+              name="password"
+              onChange={updatePassword}
+              value={password}
+              className="signup__input"
+            ></input>
+          </div>
+          <div className="input">
+            <label className="signup__label">Repeat Password</label>
+            <input
+              type="password"
+              name="repeat_password"
+              onChange={updateRepeatPassword}
+              value={repeatPassword}
+              // required={true}
+              className="signup__input"
+            ></input>
+          </div>
+          <div id="signup__buttons">
+            <NavLink to="/login"><h3 id="login__link">Have an account? Log in!</h3></NavLink>
+            <button onClick={demoLogin}>Demo Login</button>
+            <button type="submit" id="signup__button">Sign Up</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
