@@ -23,18 +23,19 @@
 }
 
 #create__entry {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   justify-self: flex-start;
-   align-self: center;
-   width: 50px;
-   height: 50px;
-   margin-top: 4px;
-   margin-left: 18px;
+   margin-bottom: 5px;
+   width: 157px;
+   height: 49px;
    border: 1px solid #707070;
-   border-radius: 25px;
+   border-radius: 15px;
+   background-color: white;
    cursor: pointer;
+}
+
+#create__entry a{
+ padding: 12px;
+ color: black;
+ text-decoration: none;
 }
 
 #journal__title {
