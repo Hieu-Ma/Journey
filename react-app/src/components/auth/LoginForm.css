@@ -116,7 +116,9 @@
    border: 2px solid rgb(95, 95, 95);
 }
 
-#login__button {
+
+#login__button__demo {
    margin-left: 5px;
    margin-right: 43px;
+
 }
