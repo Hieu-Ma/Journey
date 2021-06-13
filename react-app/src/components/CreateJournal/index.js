@@ -138,6 +138,14 @@ const CreateJournal = () => {
                <div id="emotion__img" className="images"></div>
             </div>
 
+            <div id="credit">
+               <h1>credit</h1>
+               <a href="https://intermountainhealthcare.org/blogs/topics/live-well/2018/07/5-powerful-health-benefits-of-journaling/" target="blank">
+                  Article Link
+               </a>
+               <a href="http://www.freepik.com" target="blank"> "Watercolor login page" - Designed by mons.design / Freepik</a>
+               <a href="http://www.freepik.com" target="blank">"People with happy emojis" - Designed by Freepik</a>
+            </div>
          </div>
       </div>
    )
