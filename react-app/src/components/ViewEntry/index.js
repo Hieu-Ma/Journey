@@ -59,7 +59,7 @@ const ViewEntry = () => {
          <div id="journal__title__container">
                <button id="create__entry">
                   <NavLink to={`/journals/${entry.journal_id}/create`} >
-                     Create Entry
+                     create entry
                   </NavLink>
                </button>
             <div id="journal__title"><NavLink to={`/journals/${entry.journal_id}`}>{entry.journal_title}</NavLink></div>         </div>
