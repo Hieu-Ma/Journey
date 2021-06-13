@@ -42,6 +42,7 @@
    margin: 31px 0px;
    margin-left: 10px;
    overflow-y: scroll;
+   color: #707070;
 }
 
 #benefits__title {
@@ -172,6 +173,29 @@
    background-image: url("../../images/happy_girl.png");
    width: 345px;
    height: 230px;
+}
+
+#credit {
+   display: flex;
+   flex-direction: column;
+   margin-left: 40px;
+}
+
+#credit h1 {
+   margin: 0px;
+   margin-bottom: 10px;
+   font-size: 20px
+}
+
+#credit a{
+   color: #4E4E4E;
+   text-decoration: none;
+   transition: color .2s;
+   margin-bottom: 10px;
+}
+
+#credit a:hover {
+   color: black;
 }
 
 /* Create journal modal */
