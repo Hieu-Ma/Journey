@@ -76,8 +76,8 @@ const LoginForm = () => {
           </div>
           <div id="login__buttons">
             <NavLink to="/sign-up"><h3 id="signup__link">No account? Sign up!</h3></NavLink>
-            <button onClick={demoLogin}>Demo Login</button>
-            <button type="submit" id="login__button">Login</button>
+            <button type="submit">Login</button>
+            <button onClick={demoLogin} id="login__button__demo">Demo Login</button>
           </div>
         </form>
       </div>
