@@ -25,6 +25,8 @@ Journey is a journaling app where users can create their own journal and entries
 * Users can create, read, update, and delete journals.
 * Users can create, read, update, and delete journal entries.
 
+[![Journey3.gif](https://s6.gifyu.com/images/Journey3.gif)](https://gifyu.com/image/12Ju)
+
 # Technologies
 * Html, Css, Javascript
 * React
