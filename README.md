@@ -3,6 +3,8 @@
 ### Live Site
 https://aa-journey.herokuapp.com/
 
+[![Journey.gif](https://s6.gifyu.com/images/Journey.gif)](https://gifyu.com/image/12AF)
+
 # Summary
 Journey is a journaling app where users can create their own journal and entries in it!
 
