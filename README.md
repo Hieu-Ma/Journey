@@ -14,9 +14,10 @@ Journey is a journaling app where users can create their own journal and entries
 
 [Frontend Routes](#frontend_routes)
 
+[Backend Routes](#backend_routes)
+
 [Database_Schema](#database_schema)
 
-[Future Features](#stretch-goals)
 
 # Features
 * Users can create, read, update, and delete journals.
@@ -28,3 +29,13 @@ Journey is a journaling app where users can create their own journal and entries
 * Redux
 * Flask
 * Python
+
+# Frontend_Routes
+https://github.com/Hieu-Ma/Journey/wiki/Frontend-Routes
+
+# Backend_Routes
+https://github.com/Hieu-Ma/Journey/wiki/Backend-Routes
+
+# Database_Schema
+<a href="https://ibb.co/XDXtWxn"><img src="https://i.ibb.co/zFsZmV3/Journey.png" alt="Journey" border="0"></a>
+
