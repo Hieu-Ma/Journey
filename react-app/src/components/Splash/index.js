@@ -17,22 +17,14 @@ const Splash = () => {
          <div id="splash__intro">
             <div id="splash__intro__text">
                <h1>Welcome to my app Journey</h1>
-               <h3>Here users can create their own journals and entries.</h3>
-               <h3 id="main__site__link"><NavLink to="/login">Enter the main site here!</NavLink></h3>
-            </div>
-            <div id="splash__intro__graphic">
-               <img src={polygon_1} id="polygon__1" className="polygon"></img>
-               <img src={polygon_2} id="polygon__2" className="polygon"></img>
-               <img src={polygon_3} id="polygon__3" className="polygon"></img>
-               <img src={polygon_4} id="polygon__4" className="polygon"></img>
-               <img src={polygon_5} id="polygon__5" className="polygon"></img>
-               <img src={polygon_6} id="polygon__6" className="polygon"></img>
+               <h3>Here users can create their own journals and entries</h3>
+               <h3 id="main__site__link"><NavLink to="/login">Visit the site</NavLink></h3>
             </div>
          </div>
-         <div id="splash__intro__borders">
+         {/* <div id="splash__intro__borders">
             <div id="black__border"></div>
             <div id="grey__border"></div>
-         </div>
+         </div> */}
          <div id="technologies">
             <div id="technologies__title">Technologies:</div>
             <div id="html" className="technology">HTML 5</div>
