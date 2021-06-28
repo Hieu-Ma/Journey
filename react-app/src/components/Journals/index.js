@@ -24,7 +24,7 @@ const Journals = () => {
 
   useEffect(() => {
     dispatch(userJournals())
-  },[dispatch, journals]);
+  },[dispatch]);
 
   if(!journals) return null;
 
