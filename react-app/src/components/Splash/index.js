@@ -21,37 +21,42 @@ const Splash = () => {
                <h3 id="main__site__link"><NavLink to="/login">Visit the site</NavLink></h3>
             </div>
          </div>
+
+      </div>
+   )
+}
+
+export default Splash;
+
+
+
+
          {/* <div id="splash__intro__borders">
             <div id="black__border"></div>
             <div id="grey__border"></div>
          </div> */}
-         <div id="technologies">
+         {/* <div id="technologies">
             <div id="technologies__title">Technologies:</div>
             <div id="html" className="technology">HTML 5</div>
             <div id="css" className="technology">CSS</div>
             <div id="js" className="technology">Js</div>
             <div id="react" className="technology">React</div>
             <div id="python" className="technology">Python</div>
-         </div>
-         <div id="me__container">
-            <div id="me">
-               <div id="about">About Me:</div>
-               <img id="profile__pic" src={me}></img>
-            </div>
-            <div id="me__description">
-               Hey! Im Hieu! Currently I am an aspiring software engineer.
-               I went down this career path because I love how you can continously learn and grow.
-               As such, some of my favorite hobbies include reading and drawing!
-            </div>
-            <div id="links__title">Links:</div>
-            <div id="links">
-               <a href="https://github.com/Hieu-Ma" target="_blank">GitHub</a>
-               <a href="https://github.com/Hieu-Ma/Journey" target="_blank">Project</a>
-               <a href="https://www.linkedin.com/in/hieu-ma/" target="_blank">LinkedIn</a>
-            </div>
-         </div>
-      </div>
-   )
-}
-
-export default Splash;
+         </div> */}
+         // <div id="me__container">
+         //    <div id="me">
+         //       <div id="about">About Me:</div>
+         //       <img id="profile__pic" src={me}></img>
+         //    </div>
+         //    <div id="me__description">
+         //       Hey! Im Hieu! Currently I am an aspiring software engineer.
+         //       I went down this career path because I love how you can continously learn and grow.
+         //       As such, some of my favorite hobbies include reading and drawing!
+         //    </div>
+         //    <div id="links__title">Links:</div>
+         //    <div id="links">
+         //       <a href="https://github.com/Hieu-Ma" target="_blank">GitHub</a>
+         //       <a href="https://github.com/Hieu-Ma/Journey" target="_blank">Project</a>
+         //       <a href="https://www.linkedin.com/in/hieu-ma/" target="_blank">LinkedIn</a>
+         //    </div>
+         // </div>
