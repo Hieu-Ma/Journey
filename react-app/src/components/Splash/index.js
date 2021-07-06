@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, NavLink } from "react-router-dom";
 import { login } from "../../store/session";
-import polygon_1 from "../../images/Polygon_1.png";
-import polygon_2 from "../../images/Polygon_2.png";
-import polygon_3 from "../../images/Polygon_3.png";
-import polygon_4 from "../../images/Polygon_4.png";
-import polygon_5 from "../../images/Polygon_5.png";
-import polygon_6 from "../../images/Polygon_6.png";
 import me from "../../images/hieu.jpg"
 import "./Splash.css";
 
@@ -15,13 +9,16 @@ const Splash = () => {
    return (
       <div id="splash">
          <div id="splash__intro">
-            <div id="splash__intro__text">
-               <h1>Welcome to my app Journey</h1>
-               <h3>Here users can create their own journals and entries</h3>
-               <h3 id="main__site__link"><NavLink to="/login">Visit the site</NavLink></h3>
+            <h1 id="title">Welcome to my app Journey</h1>
+            <h3 id="subtitle">Here users can create their own journals and entries</h3>
+            <h3 id="main__site__link"><NavLink to="/login">Visit the site</NavLink></h3>
+         </div>
+         <div id="about">
+            <div id="about--innerMargin">
+               <h1 id="about__title">About</h1>
+               <h3>Technologies</h3>
             </div>
          </div>
-
       </div>
    )
 }
