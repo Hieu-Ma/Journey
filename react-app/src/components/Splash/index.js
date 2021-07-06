@@ -50,7 +50,6 @@ const Splash = () => {
                </div>
                <h3>About Me</h3>
                <div id="profile">
-                  <img src={me} id="profile__picture"></img>
                   <p>
                      Hey! Im Hieu! Currently I am an aspiring software engineer.
                      I went down this career path because I love how you can continously learn and grow.
