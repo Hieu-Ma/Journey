@@ -50,7 +50,7 @@
 
 #about {
    width: 40rem;
-   height: 10rem;
+   height: auto;
    border: 1px solid #707070;
    border-radius: 27px;
    margin-top: 4rem;
@@ -65,4 +65,36 @@
 #about__title {
    border-bottom: 1px solid #707070;
    padding-bottom: 5px;;
+}
+
+#links a{
+   margin-right: 1em;
+   color:#4E4E4E;
+   text-decoration: none;
+   transition: color .2s;
+}
+
+#links a:hover {
+   color: rgb(169, 204, 255);
+}
+
+#technologies svg{
+   height: 5rem;
+   margin-right: 1rem;
+}
+
+#about h3 {
+   padding-bottom: 3px;
+   text-decoration: underline;
+}
+
+#profile {
+   display: flex;
+}
+
+#profile__picture {
+   height: 100px;
+   width: 300px;
+   border-radius: 50%;
+   margin-right: 1rem;
 }
