@@ -59,6 +59,7 @@ const ViewJournal = () => {
                name="newTitle"
                onChange={e => setNewTitle(e.target.value)}
                value={newTitle}
+               placeholder={journal?.title}
                id="insert__title"
                maxlength="20"
                required
