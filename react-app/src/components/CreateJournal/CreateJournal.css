@@ -179,23 +179,26 @@
    display: flex;
    flex-direction: column;
    margin-left: 40px;
+   margin-right: 40px;
 }
 
 #credit h1 {
    margin: 0px;
    margin-bottom: 10px;
-   font-size: 20px
+   font-size: 20px;
+   border-bottom: 1px solid black;
+   padding-bottom: .5rem;
 }
 
 #credit a{
-   color: #4E4E4E;
+   color: #66a0eb;
    text-decoration: none;
    transition: color .2s;
-   margin-bottom: 10px;
+   margin: .3em 0;
 }
 
 #credit a:hover {
-   color: black;
+   color: #2678e4;
 }
 
 /* Create journal modal */
