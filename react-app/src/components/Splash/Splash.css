@@ -72,15 +72,18 @@
    margin-right: 1em;
    color:#4E4E4E;
    text-decoration: none;
-   transition: color .2s;
+   padding-bottom: 2px;
+   border-bottom: 2px solid white;
+   transition: border-bottom .2s;
+
 }
 
 #links a:hover {
-   color: rgb(169, 204, 255);
+   border-bottom: 2px solid #4E4E4E;
 }
 
 #technologies svg{
-   height: 4rem;
+   height: 3rem;
    margin-right: 1rem;
 }
 
@@ -95,5 +98,5 @@
 
 #profile p {
    margin-top: 0;
-   margin-bottom: 4rem;
+   margin-bottom: 3.75rem;
 }
