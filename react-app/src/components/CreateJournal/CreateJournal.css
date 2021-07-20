@@ -1,4 +1,5 @@
 
+
 #journal__border {
    display: flex;
    align-items: center;
@@ -274,7 +275,7 @@
    margin-right: 6px;
 }
 
-@media screen and (max-width: 1800px) {
+/* @media screen and (max-width: 1800px) {
    #journal__benefits {
       display: grid;
       grid-template-columns: 1fr;
@@ -292,8 +293,6 @@
       scrollbar-width: none;
       align-items: center;
    }
-
-   /* text containers */ 
 
    .containers {
       margin: 0px;
@@ -324,8 +323,6 @@
       margin: 0px;
    }
    
-   /* img containers */
-
    #stress__img__container {
       display: none;
       margin-left:20px
@@ -356,4 +353,4 @@
    }
 
    
-}
+} */

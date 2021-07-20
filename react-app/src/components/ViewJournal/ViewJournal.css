@@ -41,7 +41,7 @@
 }
 
 #journal__entries__container {
-   height: 480px;
+   height: 48vh;
    margin: 10px 0px;
    margin-bottom: 0px;
    overflow-y: scroll;

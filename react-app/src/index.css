@@ -7,6 +7,9 @@
 
 body {
    margin: 0px;
+   position: relative;
+   /* overflow-x: scroll; */
+   /* display: flex; */
 }
 
 /* width */
