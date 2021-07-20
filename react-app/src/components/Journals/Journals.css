@@ -1,7 +1,9 @@
 #journals {
    position: absolute;
-   width: 22rem;
-   height: 44rem;
+   /* width: 22rem;
+   height: 44rem; */
+   height: 72vh;
+   width: 20vw;
    border: 1px solid #707070;
    border-radius: 31px;
    margin-top: 65px;
